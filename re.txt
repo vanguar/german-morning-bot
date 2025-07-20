@@ -1,0 +1,17 @@
+
+python -m venv venv  -  создание виртуалки
+venv\Scripts\Activate  - активация виртуалки
+ 
+git status   -   проверить статус
+
+git add .   -   добавить файлы в индекс
+
+git commit -m "Краткое описание изменений"   -   зафиксировать изменения
+
+
+git remote add origin https://github.com/ваш-логин/имя-репо.git   -   При первом пуше привязать удалённый репозитарий
+
+git push origin main   -   отправить на ГитХаб
+
+
+

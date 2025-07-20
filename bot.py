@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.filters import Command
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
@@ -34,43 +34,64 @@ if not BOT_TOKEN:
 
 lesson_mgr = LessonManager()
 
-# Клавиатура сразу целиком (aiogram 3)
+# Основная клавиатура с кнопками навигации по урокам
 kb = ReplyKeyboardMarkup(
     keyboard=[
         [KeyboardButton(text="📘 Следующий урок")],
-        [KeyboardButton(text="🔁 Повторить все")],
-        [KeyboardButton(text="📈 Прогресс")],
+        [KeyboardButton(text="🔁 Повторить все"), KeyboardButton(text="📈 Прогресс")],
         [KeyboardButton(text="🏁 Начать с первого урока")],
     ],
     resize_keyboard=True,
 )
 
+# Inline-клавиатура для выбора уровня
+level_kb = InlineKeyboardMarkup(inline_keyboard=[
+    [
+        InlineKeyboardButton(text="🚀 Уровень A1", callback_data="set_level:A1"),
+        InlineKeyboardButton(text="🚀🚀 Уровень A2", callback_data="set_level:A2")
+    ]
+])
 
+# ИЗМЕНЕНО: текст стал более универсальным
 def build_start_text() -> str:
     return (
-        "<b>👋 Привет! Добро пожаловать в мини‑бот ежедневных уроков немецкого.</b>\n\n"
-        f"🎯 <b>Уровень по умолчанию:</b> {DEFAULT_LEVEL} (напиши <code>A1</code> или <code>A2</code> чтобы сменить).\n"
-        f"🕒 <b>Авто‑урок утром:</b> 1 шт.\n"
-        f"⚡ <b>Ручные уроки:</b> до {MAX_MANUAL_PER_DAY} в день (антифлуд отключён).\n\n"
-        "🔘 <b>Кнопки:</b>\n"
-        "📘 Следующий урок — новый материал\n"
-        "🔁 Повторить все — пересмотреть пройденное\n"
-        "📈 Прогресс — статистика и %\n"
-        "🏁 Начать с первого урока — полный сброс\n\n"
-        "ℹ️ Команда: /progress\n"
-        "Удачи! 🚀"
+        "<b>👋 Привет! Добро пожаловать в мини‑бот для изучения немецкого.</b>\n\n"
+        "Выберите ваш уровень, чтобы начать или сменить текущий.\n\n"
+        "Для навигации по урокам используйте кнопки ниже 👇"
     )
-
 
 # -------- Handlers --------
 
+# ИЗМЕНЕНО: теперь отправляется одно сообщение
 async def cmd_start(message: Message):
     user_id = message.from_user.id
     register_user(user_id, utc_date_str())
     reactivate_if_blocked(user_id)
-    await message.answer(build_start_text(), reply_markup=kb)
+    # Отправляем одно универсальное сообщение с обеими клавиатурами
+    await message.answer(build_start_text(), reply_markup=level_kb)
+    # Reply-клавиатура отправляется вместе с первым сообщением и "прилипает"
+    await message.answer("Главное меню:", reply_markup=kb)
 
+# Обработчик для нажатий на Inline-кнопки
+async def set_level_callback_handler(callback: CallbackQuery):
+    new_level = callback.data.split(":")[1]
+    user_id = callback.from_user.id
 
+    row = get_user(user_id)
+    if not row:
+        await callback.answer("Сначала /start", show_alert=True)
+        return
+
+    current_level = row[1]
+    if current_level == new_level and row[2] > 0:
+        await callback.answer(f"Уровень {new_level} уже активен.", show_alert=True)
+        return
+
+    set_level(user_id, new_level)
+    await callback.answer(f"Уровень {new_level} установлен!", show_alert=True)
+    await callback.message.answer(f"✅ Уровень изменён на <b>{new_level}</b>.\nНажмите «📘 Следующий урок», чтобы начать.")
+
+# Остальные хендлеры остаются без изменений...
 async def cmd_progress(message: Message):
     row = get_user(message.from_user.id)
     if not row:
@@ -79,22 +100,6 @@ async def cmd_progress(message: Message):
     _, level, lesson_index, *_ = row
     total = lesson_mgr.total(level)
     await message.answer(get_progress_text(message.from_user.id, total))
-
-
-async def set_level_handler(message: Message):
-    new_level = message.text.upper()
-    user_id = message.from_user.id
-    row = get_user(user_id)
-    if not row:
-        await message.answer("Сначала /start")
-        return
-    current_level = row[1]
-    if current_level == new_level and row[2] > 0:
-        await message.answer(f"Уровень уже {new_level}.")
-        return
-    set_level(user_id, new_level)
-    await message.answer(f"Уровень установлен: {new_level}. Жми «📘 Следующий урок».")  # HTML не нужен
-
 
 async def repeat_all_handler(message: Message):
     user_id = message.from_user.id
@@ -106,15 +111,11 @@ async def repeat_all_handler(message: Message):
     _, level, lesson_index, *_ = row
     parts = lesson_mgr.repeat_all(level, lesson_index)
 
-    # Если вдруг вернулась одна строка (устаревшие версии),
-    # приводим к списку
     if isinstance(parts, str):
         parts = [parts]
 
     for part in parts:
         await message.answer(part)
-
-
 
 async def next_lesson_handler(message: Message):
     user_id = message.from_user.id
@@ -124,30 +125,20 @@ async def next_lesson_handler(message: Message):
         return
 
     (
-        _uid,
-        level,
-        lesson_index,
-        _manual_today,
-        _start_date,
-        _last_sent,
-        _last_req,
-        status,
-        _reactivated_at,
+        _uid, level, lesson_index, _manual_today, _start_date,
+        _last_sent, _last_req, status, _reactivated_at,
     ) = row
 
     if status != "active":
         await message.answer("Статус не active. Напиши /start для реактивации.")
         return
 
-    # Сброс дневного счётчика
     reset_manual_if_new_day(user_id)
-
     total = lesson_mgr.total(level)
     if lesson_index >= total:
         await message.answer(lesson_mgr.end_message(level))
         return
 
-    # Дневной лимит (если хочешь убрать — вырезай этот блок + increment_manual)
     if not can_take_manual(user_id, MAX_MANUAL_PER_DAY):
         await message.answer("Достигнут лимит ручных уроков на сегодня.")
         return
@@ -159,12 +150,10 @@ async def next_lesson_handler(message: Message):
 
     await message.answer(text)
 
-    # Обновление прогресса
     set_last_request(user_id)
     increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
-
 
 async def restart_from_first_handler(message: Message):
     user_id = message.from_user.id
@@ -189,12 +178,10 @@ async def restart_from_first_handler(message: Message):
     increment_manual(user_id)
     set_last_sent(user_id)
 
-
 async def fallback(message: Message):
     await message.answer(
-        "Не понял. Кнопки:\n📘 урок • 🔁 повтор • 📈 прогресс • 🏁 сначала\nИли /progress."
+        "Не понял. Кнопки:\n📘 урок • 🔁 повтор • 📈 прогресс • 🏁 сначала\nИли выберите уровень через /start."
     )
-
 
 # -------- Main --------
 
@@ -203,8 +190,9 @@ async def main():
     dp = Dispatcher()
 
     dp.message.register(cmd_start, Command("start"))
+    dp.callback_query.register(set_level_callback_handler, F.data.startswith("set_level:"))
+    
     dp.message.register(cmd_progress, Command("progress"))
-    dp.message.register(set_level_handler, F.text.in_({"A1", "A2", "a1", "a2"}))
     dp.message.register(next_lesson_handler, F.text == "📘 Следующий урок")
     dp.message.register(repeat_all_handler, F.text == "🔁 Повторить все")
     dp.message.register(cmd_progress, F.text == "📈 Прогресс")
@@ -216,7 +204,7 @@ async def main():
         default=DefaultBotProperties(parse_mode=ParseMode.HTML),
     )
     logger.info("Bot started (polling)...")
-    await dp.start_polling(bot, allowed_updates=["message"])
+    await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
 
 
 if __name__ == "__main__":
