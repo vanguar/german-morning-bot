@@ -2,726 +2,1984 @@
   "A1": [
     {
       "title": "A1 Урок 1: Приветствия и знакомство",
-      "words": [["Hallo","привет"],["Guten Morgen","доброе утро"],["Guten Tag","добрый день"],["Guten Abend","добрый вечер"]],
-      "phrases": [["Wie heißt du?","Как тебя зовут?"],["Ich heiße Anna.","Меня зовут Анна."],["Wie geht es dir?","Как у тебя дела?"]],
-      "review": [["Tschüss","пока"],["Danke","спасибо"]],
+      "words": [
+        ["Hallo", "привет (хАлло)"],
+        ["Guten Morgen", "доброе утро (гУтэн мОргэн)"],
+        ["Guten Tag", "добрый день (гУтэн тАк)"],
+        ["Guten Abend", "добрый вечер (гУтэн А:бэнт)"],
+        ["Tschüss", "пока (неформ.) (чЮс)"],
+        ["Auf Wiedersehen", "до свидания (форм.) (ауф вИ:дазэ:эн)"],
+        ["Bis bald", "до скорого (бис бальт)"],
+        ["Bitte", "пожалуйста (бИтэ)"],
+        ["Danke", "спасибо (дАнкэ)"]
+      ],
+      "phrases": [
+        ["Wie heißt du?", "Как тебя зовут?"],
+        ["Ich heiße Anna.", "Меня зовут Анна."],
+        ["Wie geht es dir?", "Как у тебя дела?"],
+        ["Danke, gut. Und dir?", "Спасибо, хорошо. А у тебя?"]
+      ],
+      "review": [],
       "gram": {
-        "rule": "Вопросительное слово 'Wie' используется для вопросов о способе или состоянии. Структура: Wie + Verb + Subjekt.",
-        "table": [["ich heiße","du heißt","er/sie/es heißt"],["wir heißen","ihr heißt","sie/Sie heißen"]],
-        "examples": [["Wie heißt du?","Как тебя зовут?"],["Ich heiße Maria.","Меня зовут Мария."]]
+        "rule": "Вопросительное слово 'Wie' (ви:) используется для вопросов о способе или состоянии. Структура вопроса: Wie + глагол + подлежащее.",
+        "table": [
+          ["ich heiße (их хАйсэ)", "du heißt (ду хайст)", "er/sie/es heißt (эр/зи/эс хайст)"],
+          ["wir heißen (виа хАйсэн)", "ihr heißt (иа хайст)", "sie/Sie heißen (зи/Зи хАйсэн)"]
+        ],
+        "examples": [
+          ["Wie heißt du?", "Как тебя зовут?"],
+          ["Ich heiße Maria.", "Меня зовут Мария."]
+        ]
       },
       "task": "Напишите 3 коротких диалога: приветствие – вопрос об имени – ответ – прощание."
     },
     {
       "title": "A1 Урок 2: Глагол sein (быть)",
-      "words": [["ich bin","я есть"],["du bist","ты есть"],["er/sie/es ist","он/она/оно есть"],["wir sind","мы есть"]],
-      "phrases": [["Ich bin Student.","Я студент."],["Du bist hier.","Ты здесь."],["Er ist glücklich.","Он счастлив."]],
-      "review": [["Guten Morgen","доброе утро"]],
+      "words": [
+        ["sein", "быть (зайн)"],
+        ["ich bin", "я есть (их бин)"],
+        ["du bist", "ты есть (ду бист)"],
+        ["er/sie/es ist", "он/она/оно есть (эр/зи/эс ист)"],
+        ["wir sind", "мы есть (виа зинт)"],
+        ["ihr seid", "вы есть (иа зайт)"],
+        ["sie/Sie sind", "они/Вы есть (зи/Зи зинт)"],
+        ["hier", "здесь (хиа)"],
+        ["glücklich", "счастливый (глЮклихь)"],
+        ["müde", "уставший (мЮ:дэ)"]
+      ],
+      "phrases": [
+        ["Ich bin Student.", "Я студент."],
+        ["Du bist hier.", "Ты здесь."],
+        ["Er ist glücklich.", "Он счастлив."]
+      ],
+      "review": [
+        ["Guten Morgen", "доброе утро (гУтэн мОргэн)"]
+      ],
       "gram": {
-        "rule": "Спряжение глагола 'sein'. Очень важный глагол-связка в немецком.",
-        "table": [["ich bin","du bist","er/sie/es ist"],["wir sind","ihr seid","sie/Sie sind"]],
-        "examples": [["Ich bin müde.","Я устал."],["Wir sind hier.","Мы здесь."]]
+        "rule": "Спряжение глагола 'sein'. Это один из важнейших глаголов-связок в немецком языке, его формы нужно выучить.",
+        "table": [
+          ["ich bin (их бин)", "du bist (ду бист)", "er/sie/es ist (эр/зи/эс ист)"],
+          ["wir sind (виа зинт)", "ihr seid (иа зайт)", "sie/Sie sind (зи/Зи зинт)"]
+        ],
+        "examples": [
+          ["Ich bin müde.", "Я устал."],
+          ["Wir sind hier.", "Мы здесь."]
+        ]
       },
       "task": "Составьте 5 предложений с разными формами 'sein'."
     },
     {
       "title": "A1 Урок 3: Глагол haben (иметь)",
-      "words": [["ich habe","я имею"],["du hast","ты имеешь"],["er/sie/es hat","он/она/оно имеет"],["wir haben","мы имеем"]],
-      "phrases": [["Ich habe Zeit.","У меня есть время."],["Hast du ein Buch?","У тебя есть книга?"],["Er hat eine Frage.","У него есть вопрос."]],
-      "review": [["sein","быть"]],
+      "words": [
+        ["haben", "иметь (хА:бэн)"],
+        ["ich habe", "я имею (их хА:бэ)"],
+        ["du hast", "ты имеешь (ду хаст)"],
+        ["er/sie/es hat", "он/она/оно имеет (эр/зи/эс хат)"],
+        ["wir haben", "мы имеем (виа хА:бэн)"],
+        ["ihr habt", "вы имеете (иа хапт)"],
+        ["sie/Sie haben", "они/Вы имеете (зи/Зи хА:бэн)"],
+        ["die Zeit", "время (ди цайт)"],
+        ["der Hunger", "голод (дэа хУнга)"],
+        ["der Durst", "жажда (дэа дурст)"]
+      ],
+      "phrases": [
+        ["Ich habe Zeit.", "У меня есть время."],
+        ["Hast du ein Buch?", "У тебя есть книга?"],
+        ["Er hat eine Frage.", "У него есть вопрос."]
+      ],
+      "review": [
+        ["sein", "быть (зайн)"]
+      ],
       "gram": {
-        "rule": "Спряжение глагола 'haben'. Вспомогательный глагол для образования Perfekt.",
-        "table": [["ich habe","du hast","er/sie/es hat"],["wir haben","ihr habt","sie/Sie haben"]],
-        "examples": [["Ich habe Hunger.","Я голоден."],["Wir haben Ferien.","У нас каникулы."]]
+        "rule": "Спряжение глагола 'haben'. Часто используется в устойчивых выражениях, например, 'Ich habe Hunger' (досл. 'я имею голод').",
+        "table": [
+          ["ich habe", "du hast", "er/sie/es hat"],
+          ["wir haben", "ihr habt", "sie/Sie haben"]
+        ],
+        "examples": [
+          ["Ich habe Hunger.", "Я голоден."],
+          ["Wir haben Ferien.", "У нас каникулы."]
+        ]
       },
-      "task": "Напишите 4 предложения с 'haben' о своих вещах или навыках."
+      "task": "Напишите 4 предложения с 'haben' о своих вещах или чувствах."
     },
     {
       "title": "A1 Урок 4: Числа и возраст",
-      "words": [["eins","один"],["zwei","два"],["drei","три"],["vier","четыре"],["fünf","пять"]],
-      "phrases": [["Wie alt bist du?","Сколько тебе лет?"],["Ich bin 25 Jahre alt.","Мне 25 лет."]],
-      "review": [["zehn","десять"],["zwanzig","двадцать"]],
+      "words": [
+        ["eins", "один (айнс)"],
+        ["zwei", "два (цвай)"],
+        ["drei", "три (драй)"],
+        ["vier", "четыре (фи:а)"],
+        ["fünf", "пять (фюнф)"],
+        ["sechs", "шесть (зэкс)"],
+        ["sieben", "семь (зИ:бэн)"],
+        ["acht", "восемь (ахт)"],
+        ["neun", "девять (нойн)"],
+        ["zehn", "десять (це:н)"],
+        ["das Jahr", "год (дас я:р)"]
+      ],
+      "phrases": [
+        ["Wie alt bist du?", "Сколько тебе лет?"],
+        ["Ich bin 25 Jahre alt.", "Мне 25 лет."]
+      ],
+      "review": [
+        ["zehn", "десять (це:н)"],
+        ["zwanzig", "двадцать (цвАнцыхь)"]
+      ],
       "gram": {
-        "rule": "Числительные используются с вопросом 'Wie alt?'.",
-        "table": [["eins, zwei, drei"],["zehn, zwanzig, dreißig"]],
-        "examples": [["Ich habe zwei Katzen.","У меня две кошки."],["Er ist zehn Jahre alt.","Ему 10 лет."]]
+        "rule": "Для вопроса о возрасте используется конструкция 'Wie alt...?' (Как стар...?). Ответ строится с глаголом 'sein'.",
+        "table": [
+          ["elf (эльф), zwölf (цвёльф)"],
+          ["dreizehn (дрАйце:н), vierzehn (фИрце:н)"]
+        ],
+        "examples": [
+          ["Ich habe zwei Katzen.", "У меня две кошки."],
+          ["Er ist zehn Jahre alt.", "Ему 10 лет."]
+        ]
       },
-      "task": "Составьте 5 предложений с числительными (возраст, количество)."
+      "task": "Составьте 5 предложений с числительными (возраст, количество предметов)."
     },
     {
-      "title": "A1 Урок 5: Семья и родственники",
-      "words": [["die Mutter","мать"],["der Vater","отец"],["die Schwester","сестра"],["der Bruder","брат"]],
-      "phrases": [["Meine Mutter heißt...","Мою мать зовут..."],["Ich habe einen Bruder.","У меня есть брат."]],
-      "review": [["Eltern","родители"],["Kind","ребёнок"]],
-      "gram": {
-        "rule": "Множественное число существительных: Mutter–Mütter, Vater–Väter.",
-        "table": [["die Mutter – die Mütter"],["der Vater – die Väter"]],
-        "examples": [["Ich habe zwei Schwestern.","У меня две сестры."],["Meine Eltern wohnen in Berlin.","Мои родители живут в Берлине."]]
-      },
-      "task": "Опишите свою семью в 5 предложениях."
+        "title": "A1 Урок 5: Семья и родственники",
+        "words": [
+            ["die Familie", "семья (ди фамИ:лие)"],
+            ["die Mutter", "мать (ди мУта)"],
+            ["der Vater", "отец (дэа фА:та)"],
+            ["die Eltern", "родители (ди Эльтерн)"],
+            ["die Schwester", "сестра (ди швЭста)"],
+            ["der Bruder", "брат (дэа брУ:да)"],
+            ["das Kind", "ребёнок (дас кинт)"],
+            ["die Großmutter (Oma)", "бабушка (Ома) (ди грО:смута)"],
+            ["der Großvater (Opa)", "дедушка (Опа) (дэа грО:сфа:та)"]
+        ],
+        "phrases": [
+            ["Meine Mutter heißt...", "Мою мать зовут..."],
+            ["Ich habe einen Bruder.", "У меня есть брат."],
+            ["Das ist meine Familie.", "Это моя семья."]
+        ],
+        "review": [
+            ["die Eltern", "родители (ди Эльтерн)"],
+            ["das Kind", "ребёнок (дас кинт)"]
+        ],
+        "gram": {
+            "rule": "Притяжательные местоимения (mein/meine, dein/deine) согласуются с родом существительного. 'Mein' для мужского и среднего рода, 'meine' для женского и множественного числа.",
+            "table": [
+                ["der Vater -> mein Vater"],
+                ["die Mutter -> meine Mutter"],
+                ["das Kind -> mein Kind"],
+                ["die Eltern (мн.ч) -> meine Eltern"]
+            ],
+            "examples": [
+                ["Ich habe zwei Schwestern.", "У меня две сестры."],
+                ["Meine Eltern wohnen in Berlin.", "Мои родители живут в Берлине."]
+            ]
+        },
+        "task": "Опишите свою семью в 5 предложениях, используя притяжательные местоимения."
     },
     {
       "title": "A1 Урок 6: Дни недели и время суток",
-      "words": [["der Montag","понедельник"],["der Dienstag","вторник"],["der Mittwoch","среда"]],
-      "phrases": [["Am Montag gehe ich zur Arbeit.","В понедельник я иду на работу."],["Guten Abend!","Добрый вечер!"]],
-      "review": [["heute","сегодня"],["morgen","завтра"]],
+      "words": [
+        ["der Montag", "понедельник (дэа мО:нтак)"],
+        ["der Dienstag", "вторник (дэа дИ:нстак)"],
+        ["der Mittwoch", "среда (дэа мИтвох)"],
+        ["der Donnerstag", "четверг (дэа дОнастак)"],
+        ["der Freitag", "пятница (дэа фрАйтак)"],
+        ["der Samstag", "суббота (дэа зАмстак)"],
+        ["der Sonntag", "воскресенье (дэа зОнтак)"],
+        ["die Woche", "неделя (ди вОхэ)"],
+        ["heute", "сегодня (хОйтэ)"],
+        ["morgen", "завтра (мОргэн)"]
+      ],
+      "phrases": [
+        ["Was machen wir am Montag?", "Что мы делаем в понедельник?"],
+        ["Heute ist Mittwoch.", "Сегодня среда."]
+      ],
+      "review": [
+        ["heute", "сегодня (хОйтэ)"],
+        ["morgen", "завтра (мОргэн)"]
+      ],
       "gram": {
-        "rule": "Предлог 'am' + день недели, 'um' + время.",
-        "table": [["am Montag, am Dienstag"],["um 8 Uhr, um 19 Uhr"]],
-        "examples": [["Das Treffen ist am Freitag.","Встреча в пятницу."],["Der Film beginnt um 20 Uhr.","Фильм начинается в 20:00."]]
+        "rule": "С днями недели используется предлог 'am' (an + dem). Например: am Montag. Все дни недели мужского рода (der).",
+        "table": [
+          ["am Montag, am Dienstag"],
+          ["am Wochenende (на выходных)"]
+        ],
+        "examples": [
+          ["Das Treffen ist am Freitag.", "Встреча в пятницу."],
+          ["Am Sonntag schlafe ich lange.", "В воскресенье я долго сплю."]
+        ]
       },
-      "task": "Составьте расписание на неделю (3 пункта)."
+      "task": "Составьте свое расписание на три дня недели."
     },
     {
       "title": "A1 Урок 7: Цвета и описания",
-      "words": [["rot","красный"],["blau","синий"],["grün","зелёный"]],
-      "phrases": [["Das Auto ist rot.","Машина красная."],["Der Ball ist blau.","Мяч синий."]],
-      "review": [["groß","большой"],["klein","маленький"]],
+      "words": [
+        ["die Farbe", "цвет (ди фА:рбэ)"],
+        ["rot", "красный (ро:т)"],
+        ["blau", "синий (блАу)"],
+        ["grün", "зелёный (грЮ:н)"],
+        ["gelb", "жёлтый (гэльп)"],
+        ["schwarz", "чёрный (шварц)"],
+        ["weiß", "белый (вайс)"],
+        ["groß", "большой (гро:с)"],
+        ["klein", "маленький (клайн)"],
+        ["schön", "красивый (шё:н)"]
+      ],
+      "phrases": [
+        ["Das Auto ist rot.", "Машина красная."],
+        ["Der Ball ist blau.", "Мяч синий."]
+      ],
+      "review": [
+        ["groß", "большой (гро:с)"],
+        ["klein", "маленький (клайн)"]
+      ],
       "gram": {
-        "rule": "Прилагательное перед существительным согласуется в роде и числе.",
-        "table": [["ein großer Baum","eine große Blume"],["rote Äpfel","blaue Tassen"]],
-        "examples": [["Ich sehe einen grünen Baum.","Я вижу зеленое дерево."],["Das Haus ist groß.","Дом большой."]]
+        "rule": "Когда прилагательное стоит после глагола 'sein', оно не изменяется. Это простейшая форма описания.",
+        "table": [
+          ["Das Haus ist groß."],
+          ["Die Blume ist rot."]
+        ],
+        "examples": [
+          ["Der Himmel ist blau.", "Небо синее."],
+          ["Das Gras ist grün.", "Трава зелёная."]
+        ]
       },
-      "task": "Опишите 5 предметов по цвету и размеру."
+      "task": "Опишите 5 предметов вокруг вас, используя их цвет и размер."
     },
     {
       "title": "A1 Урок 8: Еда и напитки",
-      "words": [["das Brot","хлеб"],["der Käse","сыр"],["die Milch","молоко"]],
-      "phrases": [["Ich esse Brot.","Я ем хлеб."],["Ich trinke Milch.","Я пью молоко."]],
-      "review": [["essen","есть"],["trinken","пить"]],
+      "words": [
+        ["das Essen", "еда (дас Эсэн)"],
+        ["das Getränk", "напиток (дас гэтрЭнк)"],
+        ["das Brot", "хлеб (дас бро:т)"],
+        ["der Käse", "сыр (дэа кЭ:зэ)"],
+        ["die Milch", "молоко (ди мильхь)"],
+        ["das Wasser", "вода (дас вАса)"],
+        ["der Saft", "сок (дэа зафт)"],
+        ["essen", "есть (Эсэн)"],
+        ["trinken", "пить (трИнкэн)"]
+      ],
+      "phrases": [
+        ["Ich esse Brot.", "Я ем хлеб."],
+        ["Ich trinke Milch.", "Я пью молоко."],
+        ["Was möchtest du essen?", "Что бы ты хотел съесть?"]
+      ],
+      "review": [
+        ["essen", "есть (Эсэн)"],
+        ["trinken", "пить (трИнкэн)"]
+      ],
       "gram": {
-        "rule": "Инфинитив после модального глагола стоит в конце предложения.",
-        "table": [["ich möchte essen","du willst trinken"]],
-        "examples": [["Ich möchte Brot essen.","Я хочу есть хлеб."],["Willst du Kaffee trinken?","Хочешь выпить кофе?"]]
+        "rule": "Глагол 'mögen' (в форме möchte) используется для вежливого выражения желания. Инфинитив смыслового глагола уходит в конец предложения.",
+        "table": [
+          ["ich möchte essen", "du möchtest trinken"],
+          ["er möchte schlafen", "wir möchten gehen"]
+        ],
+        "examples": [
+          ["Ich möchte einen Apfel essen.", "Я хотел бы съесть яблоко."],
+          ["Möchtest du Kaffee trinken?", "Хочешь выпить кофе?"]
+        ]
       },
-      "task": "Составьте 5 предложений о еде и напитках."
+      "task": "Составьте 5 предложений о том, что вы хотели бы съесть или выпить."
     },
     {
       "title": "A1 Урок 9: Дом и мебель",
-      "words": [["das Haus","дом"],["der Tisch","стол"],["der Stuhl","стул"]],
-      "phrases": [["Ich wohne in einem Haus.","Я живу в доме."],["Der Stuhl ist bequem.","Стул удобный."]],
-      "review": [["Zimmer","комната"],["Küche","кухня"]],
+      "words": [
+        ["das Haus", "дом (дас хАус)"],
+        ["die Wohnung", "квартира (ди вО:нунг)"],
+        ["das Zimmer", "комната (дас цИма)"],
+        ["der Tisch", "стол (дэа тиш)"],
+        ["der Stuhl", "стул (дэа шту:ль)"],
+        ["das Bett", "кровать (дас бэт)"],
+        ["der Schrank", "шкаф (дэа шранк)"],
+        ["wohnen", "жить, проживать (вО:нэн)"]
+      ],
+      "phrases": [
+        ["Ich wohne in einem Haus.", "Я живу в доме."],
+        ["Der Stuhl ist bequem.", "Стул удобный."],
+        ["Wo wohnst du?", "Где ты живешь?"]
+      ],
+      "review": [
+        ["Zimmer", "комната (цИма)"],
+        ["Küche", "кухня (кЮхе)"]
+      ],
       "gram": {
-        "rule": "Предлог 'in' + Dativ для обозначения местоположения.",
-        "table": [["im Haus","in der Küche"]],
-        "examples": [["Das Buch liegt auf dem Tisch.","Книга лежит на столе."],["Der Stuhl steht im Zimmer.","Стул стоит в комнате."]]
+        "rule": "Для обозначения местоположения (ответ на вопрос 'Wo?' - где?) используется предлог 'in' с дательным падежом (Dativ).",
+        "table": [
+          ["in dem (im) Haus", "в доме"],
+          ["in der Wohnung", "в квартире"],
+          ["im Zimmer", "в комнате"]
+        ],
+        "examples": [
+          ["Das Buch liegt auf dem Tisch.", "Книга лежит на столе."],
+          ["Der Stuhl steht im Zimmer.", "Стул стоит в комнате."]
+        ]
       },
-      "task": "Опишите свою комнату в 5 предложениях."
+      "task": "Опишите свою комнату в 5 предложениях, используя предлоги места."
     },
     {
       "title": "A1 Урок 10: Направления и город",
-      "words": [["links","налево"],["rechts","направо"],["geradeaus","прямо"]],
-      "phrases": [["Gehen Sie geradeaus.","Идите прямо."],["Biegen Sie links ab.","Поверните налево."]],
-      "review": [["wo?","где?"],["wie?","как?"]],
+      "words": [
+        ["links", "налево (линкс)"],
+        ["rechts", "направо (рэхьтс)"],
+        ["geradeaus", "прямо (гэрА:деаус)"],
+        ["die Straße", "улица (ди штрА:сэ)"],
+        ["die Ampel", "светофор (ди Ампель)"],
+        ["die Kreuzung", "перекресток (ди крОйцунг)"],
+        ["gehen", "идти (гЭ:эн)"],
+        ["fahren", "ехать (фА:рэн)"]
+      ],
+      "phrases": [
+        ["Gehen Sie geradeaus.", "Идите прямо."],
+        ["Biegen Sie links ab.", "Поверните налево."],
+        ["Entschuldigung, wie komme ich zum Bahnhof?", "Извините, как мне добраться до вокзала?"]
+      ],
+      "review": [
+        ["wo?", "где? (во:)"],
+        ["wie?", "как? (ви:)"]
+      ],
       "gram": {
-        "rule": "Императив для дачи указаний: Verb-Stamm без -st.",
-        "table": [["geh geradeaus","fahr rechts"],["komm hierher","bleib dort"]],
-        "examples": [["Geh geradeaus und dann rechts.","Иди прямо, затем направо."],["Fahren Sie bis zur Ampel.","Поезжайте до светофора."]]
+        "rule": "Императив (повелительное наклонение) для вежливой формы 'Sie' совпадает с инфинитивом. Для формы 'du' часто отбрасывается окончание -st.",
+        "table": [
+          ["du-Form: Geh! (иди!)", "ihr-Form: Geht! (идите!)"],
+          ["Sie-Form: Gehen Sie! (идите!)"]
+        ],
+        "examples": [
+          ["Geh geradeaus und dann rechts.", "Иди прямо, а затем направо."],
+          ["Fahren Sie bis zur Ampel.", "Поезжайте до светофора."]
+        ]
       },
-      "task": "Напишите маршрут от дома до ближайшего магазина."
+      "task": "Напишите простой маршрут от вашего дома до ближайшего магазина."
     },
     {
-      "title": "A1 Урок 11: Покупки: базовый диалог",
-      "words": [["das Geschäft","магазин"],["der Supermarkt","супермаркет"],["kaufen","покупать"],["verkaufen","продавать"],["der Preis","цена"],["das Geld","деньги"]],
-      "phrases": [["Ich suche einen Pullover.","Я ищу свитер."],["Wie viel kostet das?","Сколько это стоит?"],["Ich möchte das kaufen.","Я хотел бы это купить."]],
-      "review": [["zahlen","платить"],["Geld","деньги"]],
+      "title": "A1 Урок 11: Покупки в магазине",
+      "words": [
+        ["das Geschäft", "магазин (дас гэшЭфт)"],
+        ["der Supermarkt", "супермаркет (дэа зУ:памаркт)"],
+        ["kaufen", "покупать (кАуфэн)"],
+        ["verkaufen", "продавать (фэакАуфэн)"],
+        ["kosten", "стоить (кОстэн)"],
+        ["der Preis", "цена (дэа прайс)"],
+        ["das Geld", "деньги (дас гэльт)"],
+        ["zahlen", "платить (цА:лен)"]
+      ],
+      "phrases": [
+        ["Ich suche einen Pullover.", "Я ищу свитер."],
+        ["Wie viel kostet das?", "Сколько это стоит?"],
+        ["Ich möchte das kaufen.", "Я хотел бы это купить."],
+        ["Ich zahle mit Karte.", "Я плачу картой."]
+      ],
+      "review": [
+        ["zahlen", "платить (цА:лен)"],
+        ["Geld", "деньги (гэльт)"]
+      ],
       "gram": {
-        "rule": "Диалог: приветствие → вопрос о цене → выражение желания купить.",
-        "table": [["Wie viel kostet ...?","Ich möchte ..."],["Das kostet ...","Hier bitte"]],
-        "examples": [["Verkäufer: Das kostet 10 Euro.","Продавец: Это стоит 10 евро."],["Kunde: Ich möchte das kaufen.","Покупатель: Я хотел бы это купить."]]
+        "rule": "При покупке используется винительный падеж (Akkusativ), т.к. глаголы 'kaufen', 'suchen', 'möchten' требуют прямого дополнения. Вопрос о цене: 'Was kostet...?' или 'Wie viel kostet...?'",
+        "table": [
+          ["Ich suche einen Pullover (Akk)."],
+          ["Ich möchte den Käse (Akk) kaufen."]
+        ],
+        "examples": [
+          ["Verkäufer: Das kostet 10 Euro.", "Продавец: Это стоит 10 евро."],
+          ["Kunde: Ich nehme es.", "Покупатель: Я это беру."]
+        ]
       },
-      "task": "Составьте диалог покупатель–продавец (приветствие, вопрос цены, покупка)."
+      "task": "Составьте диалог покупателя и продавца (приветствие, вопрос о наличии и цене, покупка)."
     },
     {
       "title": "A1 Урок 12: Вопросительные слова",
-      "words": [["wer","кто"],["was","что"],["wann","когда"],["wo","где"],["warum","почему"],["wie","как"]],
-      "phrases": [["Wer bist du?","Кто ты?"],["Was machst du?","Что ты делаешь?"],["Wann kommst du?","Когда ты придёшь?"]],
-      "review": [["Wie heißt ...?","Как зовут?"],["Woher","откуда"]],
+      "words": [
+        ["wer", "кто (вэа)"],
+        ["was", "что (вас)"],
+        ["wann", "когда (ван)"],
+        ["wo", "где (во:)"],
+        ["wohin", "куда (во:хИн)"],
+        ["woher", "откуда (во:хЭа)"],
+        ["warum", "почему (варУм)"],
+        ["wie", "как (ви:)"]
+      ],
+      "phrases": [
+        ["Wer bist du?", "Кто ты?"],
+        ["Was machst du?", "Что ты делаешь?"],
+        ["Wann kommst du?", "Когда ты придёшь?"]
+      ],
+      "review": [
+        ["Wie heißt ...?", "Как зовут...?"],
+        ["Woher", "откуда (во:хЭа)"]
+      ],
       "gram": {
-        "rule": "Fragewörter stehen am Satzanfang und erfordern Inversion von Subjekt und Prädikat.",
-        "table": [["wer + V + S","was + V + S"],["wann + V + S","wo + V + S"]],
-        "examples": [["Wo wohnst du?","Где ты живёшь?"],["Warum lernst du Deutsch?","Почему ты учишь немецкий?"]]
+        "rule": "Вопросительные слова (W-Fragen) всегда стоят на первом месте в предложении. Сразу за ними следует глагол.",
+        "table": [
+          ["W-Wort + Verb + Subjekt ... ?"],
+          ["Wo     + wohnst + du      ?"]
+        ],
+        "examples": [
+          ["Wo wohnst du?", "Где ты живёшь?"],
+          ["Warum lernst du Deutsch?", "Почему ты учишь немецкий?"]
+        ]
       },
-      "task": "Составьте 5 вопросов с различными Fragewörtern."
+      "task": "Составьте 5 вопросов, используя разные вопросительные слова."
     },
     {
-      "title": "A1 Урок 13: Модальный глагол können",
-      "words": [["können","мочь"],["schwimmen","плавать"],["sprechen","говорить"],["lesen","читать"],["schreiben","писать"]],
-      "phrases": [["Ich kann Deutsch sprechen.","Я могу говорить по-немецки."],["Kannst du schwimmen?","Умеешь ли ты плавать?"],["Er kann gut schreiben.","Он хорошо пишет."]],
-      "review": [["sein","быть"],["haben","иметь"]],
+      "title": "A1 Урок 13: Модальный глагол können (мочь, уметь)",
+      "words": [
+        ["können", "мочь, уметь (кЁнэн)"],
+        ["schwimmen", "плавать (швИмэн)"],
+        ["sprechen", "говорить (шпрЭхэн)"],
+        ["lesen", "читать (лЕ:зэн)"],
+        ["schreiben", "писать (шрАйбэн)"],
+        ["helfen", "помогать (хЭльфэн)"],
+        ["kochen", "готовить еду (кОхэн)"]
+      ],
+      "phrases": [
+        ["Ich kann Deutsch sprechen.", "Я могу говорить по-немецки."],
+        ["Kannst du schwimmen?", "Ты умеешь плавать?"],
+        ["Er kann gut schreiben.", "Он хорошо пишет."]
+      ],
+      "review": [
+        ["sein", "быть (зайн)"],
+        ["haben", "иметь (хА:бэн)"]
+      ],
       "gram": {
-        "rule": "Modalverb 'können' steht an Position 2, Infinitiv am Ende.",
-        "table": [["ich kann","du kannst","er/sie/es kann"],["wir können","ihr könnt","sie/Sie können"]],
-        "examples": [["Ich kann gut kochen.","Я умею хорошо готовить."],["Kannst du mir helfen?","Можешь мне помочь?"]]
+        "rule": "Модальный глагол 'können' ставится на второе место (и спрягается), а основной глагол уходит в конец предложения в инфинитиве.",
+        "table": [
+          ["ich kann", "du kannst", "er/sie/es kann"],
+          ["wir können", "ihr könnt", "sie/Sie können"]
+        ],
+        "examples": [
+          ["Ich kann gut kochen.", "Я умею хорошо готовить."],
+          ["Kannst du mir helfen?", "Можешь мне помочь?"]
+        ]
       },
-      "task": "Напишите 3 вещи, die Sie können, und 2, die Sie nicht können."
+      "task": "Напишите 3 вещи, которые вы умеете делать, и 2, которые не умеете."
     },
     {
-      "title": "A1 Урок 14: Модальный глагол wollen",
-      "words": [["wollen","хотеть"],["gehen","идти"],["kommen","приходить"],["essen","есть"],["lesen","читать"]],
-      "phrases": [["Ich will nach Hause gehen.","Я хочу идти домой."],["Willst du ins Kino gehen?","Хочешь пойти в кино?"],["Wir wollen Pizza essen.","Мы хотим есть пиццу."]],
-      "review": [["können","мочь"],["lieben","любить"]],
+      "title": "A1 Урок 14: Модальный глагол wollen (хотеть)",
+      "words": [
+        ["wollen", "хотеть (вОлен)"],
+        ["gehen", "идти (гЭ:эн)"],
+        ["kommen", "приходить (кОмэн)"],
+        ["essen", "есть (Эсэн)"],
+        ["lesen", "читать (лЕ:зэн)"],
+        ["reisen", "путешествовать (рАйзэн)"],
+        ["lernen", "учить (лЭрнэн)"]
+      ],
+      "phrases": [
+        ["Ich will nach Hause gehen.", "Я хочу идти домой."],
+        ["Willst du ins Kino gehen?", "Хочешь пойти в кино?"],
+        ["Wir wollen Pizza essen.", "Мы хотим есть пиццу."]
+      ],
+      "review": [
+        ["können", "мочь (кЁнэн)"],
+        ["möchten", "хотел бы (мЁхьтэн)"]
+      ],
       "gram": {
-        "rule": "Modalverb 'wollen' – выражение желания; Infinitiv am Satzende.",
-        "table": [["ich will","du willst","er/sie/es will"],["wir wollen","ihr wollt","sie/Sie wollen"]],
-        "examples": [["Ich will lernen.","Я хочу учиться."],["Was willst du machen?","Что ты хочешь делать?"]]
+        "rule": "Модальный глагол 'wollen' выражает сильное желание или намерение. Структура предложения та же, что и с 'können'.",
+        "table": [
+          ["ich will", "du willst", "er/sie/es will"],
+          ["wir wollen", "ihr wollt", "sie/Sie wollen"]
+        ],
+        "examples": [
+          ["Ich will Deutsch lernen.", "Я хочу учить немецкий."],
+          ["Was willst du machen?", "Что ты хочешь делать?"]
+        ]
       },
-      "task": "Напишите 5 предложений mit 'Ich will...'."
+      "task": "Напишите 5 предложений о своих желаниях и планах, используя 'ich will...'."
     },
     {
-      "title": "A1 Урок 15: Модальный глагол müssen",
-      "words": [["müssen","должен"],["arbeiten","работать"],["lernen","учиться"],["gehen","идти"],["essen","есть"]],
-      "phrases": [["Ich muss arbeiten.","Я должен работать."],["Musst du heute lernen?","Ты должен сегодня учиться?"],["Wir müssen pünktlich sein.","Мы должны быть пунктуальны."]],
-      "review": [["können","мочь"],["wollen","хотеть"]],
+      "title": "A1 Урок 15: Модальный глагол müssen (быть должным)",
+      "words": [
+        ["müssen", "быть должным (мЮсэн)"],
+        ["arbeiten", "работать (Арбайтэн)"],
+        ["lernen", "учиться (лЭрнэн)"],
+        ["aufstehen", "вставать (Ауфштэ:эн)"],
+        ["einkaufen", "делать покупки (Айнкауфэн)"],
+        ["warten", "ждать (вАртэн)"]
+      ],
+      "phrases": [
+        ["Ich muss arbeiten.", "Я должен работать."],
+        ["Musst du heute lernen?", "Ты должен сегодня учиться?"],
+        ["Wir müssen pünktlich sein.", "Мы должны быть пунктуальны."]
+      ],
+      "review": [
+        ["können", "мочь (кЁнэн)"],
+        ["wollen", "хотеть (вОлен)"]
+      ],
       "gram": {
-        "rule": "Modalverb 'müssen' выражает необходимость; Infinitiv am Ende.",
-        "table": [["ich muss","du musst","er/sie/es muss"],["wir müssen","ihr müsst","sie/Sie müssen"]],
-        "examples": [["Ich muss jetzt gehen.","Мне нужно идти сейчас."],["Du musst das Buch lesen.","Ты должен прочитать эту книгу."]]
+        "rule": "Модальный глагол 'müssen' выражает необходимость, обязанность. Структура предложения не меняется.",
+        "table": [
+          ["ich muss", "du musst", "er/sie/es muss"],
+          ["wir müssen", "ihr müsst", "sie/Sie müssen"]
+        ],
+        "examples": [
+          ["Ich muss jetzt gehen.", "Мне нужно сейчас идти."],
+          ["Du musst das Buch lesen.", "Ты должен прочитать эту книгу."]
+        ]
       },
-      "task": "Составьте 5 предложений mit 'müssen' о ваших обязанностях."
+      "task": "Составьте 5 предложений с 'müssen' о ваших обязанностях на сегодня или на этой неделе."
     },
     {
       "title": "A1 Урок 16: Личные и притяжательные местоимения",
-      "words": [["ich","я"],["du","ты"],["mein","мой"],["dein","твой"],["sein","его"]],
-      "phrases": [["Das ist mein Buch.","Это моя книга."],["Ist das dein Stift?","Это твоя ручка?"],["Er liebt seine Mutter.","Он любит свою маму."]],
-      "review": [["ich bin","я есть"],["du bist","ты есть"]],
+      "words": [
+        ["ich - mein", "я - мой (их - майн)"],
+        ["du - dein", "ты - твой (ду - дайн)"],
+        ["er - sein", "он - его (эр - зайн)"],
+        ["sie - ihr", "она - её (зи - и:р)"],
+        ["wir - unser", "мы - наш (виа - Унза)"],
+        ["ihr - euer", "вы - ваш (иа - Ойа)"],
+        ["sie - ihr", "они - их (зи - и:р)"],
+        ["Sie - Ihr", "Вы - Ваш (Зи - И:р)"]
+      ],
+      "phrases": [
+        ["Das ist mein Buch.", "Это моя книга."],
+        ["Ist das dein Stift?", "Это твоя ручка?"],
+        ["Er liebt seine Mutter.", "Он любит свою маму."]
+      ],
+      "review": [
+        ["ich bin", "я есть (их бин)"],
+        ["du bist", "ты есть (ду бист)"]
+      ],
       "gram": {
-        "rule": "Притяжательное местоимение согласуется с существительным в роде, числе и падеже.",
-        "table": [["mein Buch","meine Tasche"],["dein Stift","deine Uhr"]],
-        "examples": [["Das ist meine Tasche.","Это моя сумка."],["Sein Auto ist neu.","Его машина новая."]]
+        "rule": "Притяжательное местоимение согласуется с существительным в роде, числе и падеже, получая соответствующие окончания (например, mein, mein-e, mein-en).",
+        "table": [
+          ["maskulin: mein Stift", "feminin: meine Tasche"],
+          ["neutral: mein Buch", "plural: meine Bücher"]
+        ],
+        "examples": [
+          ["Das ist meine Tasche.", "Это моя сумка."],
+          ["Sein Auto ist neu.", "Его машина новая."]
+        ]
       },
-      "task": "Опишите 5 своих вещей, используя притяжательные местоимения."
+      "task": "Опишите 5 своих или чужих вещей, используя разные притяжательные местоимения."
     },
     {
-      "title": "A1 Урок 17: Предлоги с Akkusativ",
-      "words": [["in","в"],["auf","на"],["unter","под"],["über","над"],["durch","через"]],
-      "phrases": [["Ich gehe in den Park.","Я иду в парк."],["Das Buch liegt auf den Tisch.","Книга лежит на стол."],["Er läuft durch den Wald.","Он бежит через лес."]],
-      "review": [["wo?","где?"],["wann?","когда?"]],
+      "title": "A1 Урок 17: Предлоги с Akkusativ (направление)",
+      "words": [
+        ["durch", "через, сквозь (дурьхь)"],
+        ["für", "для, за (фюа)"],
+        ["gegen", "против (гЕ:гэн)"],
+        ["ohne", "без (О:нэ)"],
+        ["um", "вокруг (ум)"],
+        ["der Park", "парк (дэа парк)"],
+        ["der Tisch", "стол (дэа тиш)"]
+      ],
+      "phrases": [
+        ["Ich gehe durch den Park.", "Я иду через парк."],
+        ["Das Geschenk ist für dich.", "Подарок для тебя."],
+        ["Wir laufen um den Tisch.", "Мы бегаем вокруг стола."]
+      ],
+      "review": [
+        ["wohin?", "куда? (во:хИн)"]
+      ],
       "gram": {
-        "rule": "Предлоги mit Akkusativ показывают направление движения.",
-        "table": [["in + Akk.","auf + Akk."],["über + Akk.","durch + Akk."]],
-        "examples": [["Sie fährt in die Stadt.","Она едет в город."],["Wir gehen durch den Park.","Мы идём через парк."]]
+        "rule": "Данные предлоги всегда требуют после себя винительного падежа (Akkusativ). В Akkusativ изменяется только артикль мужского рода.",
+        "table": [
+          ["der -> den", "ein -> einen", "mein -> meinen"],
+          ["die, das, die (Pl.) не меняются"]
+        ],
+        "examples": [
+          ["Er geht ohne seinen Mantel.", "Он идет без своего пальто."],
+          ["Sie kämpft gegen den Wind.", "Она борется против ветра."]
+        ]
       },
-      "task": "Напишите 5 предложений mit Präpositionen im Akkusativ."
+      "task": "Напишите 5 предложений, используя предлоги с Akkusativ."
     },
     {
-      "title": "A1 Урок 18: Предлоги с Dativ",
-      "words": [["mit","с"],["bei","у"],["aus","из"],["nach","после/в"],["von","от"]],
-      "phrases": [["Ich fahre mit dem Zug.","Я еду на поезде."],["Er wohnt bei seinen Eltern.","Он живёт у родителей."],["Sie kommt aus der Stadt.","Она из города."]],
-      "review": [["mit dem Bus","на автобусе"],["aus der Stadt","из города"]],
+      "title": "A1 Урок 18: Предлоги с Dativ (местоположение, источник)",
+      "words": [
+        ["aus", "из (аус)"],
+        ["bei", "у, при (бай)"],
+        ["mit", "с (мит)"],
+        ["nach", "в, после (нах)"],
+        ["seit", "с (какого-то времени) (зайт)"],
+        ["von", "от, о (фон)"],
+        ["zu", "к (цу)"]
+      ],
+      "phrases": [
+        ["Ich fahre mit dem Zug.", "Я еду на поезде."],
+        ["Er wohnt bei seinen Eltern.", "Он живёт у родителей."],
+        ["Sie kommt aus der Stadt.", "Она из города."]
+      ],
+      "review": [
+        ["mit dem Bus", "на автобусе"],
+        ["aus der Stadt", "из города"]
+      ],
       "gram": {
-        "rule": "Предлоги mit Dativ указывают на положение или источник.",
-        "table": [["mit + Dativ","bei + Dativ"],["aus + Dativ","nach + Dativ"]],
-        "examples": [["Wir spielen mit den Kindern.","Мы играем с детьми."],["Er wohnt bei seiner Tante.","Он живёт у тёти."]]
+        "rule": "Эти предлоги всегда требуют после себя дательного падежа (Dativ). В Dativ изменяются артикли всех родов.",
+        "table": [
+          ["der -> dem", "die -> der"],
+          ["das -> dem", "die (Pl.) -> den (+n)"]
+        ],
+        "examples": [
+          ["Wir spielen mit den Kindern.", "Мы играем с детьми."],
+          ["Nach der Arbeit gehe ich nach Hause.", "После работы я иду домой."]
+        ]
       },
-      "task": "Составьте 5 предложений mit Präpositionen im Dativ."
+      "task": "Составьте 5 предложений, используя предлоги с Dativ."
     },
     {
-      "title": "A1 Урок 19: Простые прилагательные",
-      "words": [["gut","хороший"],["schlecht","плохой"],["klein","маленький"],["groß","большой"]],
-      "phrases": [["Ein gutes Buch.","Хорошая книга."],["Eine große Stadt.","Большой город."],["Das ist ein schlechtes Wetter.","Плохая погода."]],
-      "review": [["rot","красный"],["grün","зелёный"]],
+      "title": "A1 Урок 19: Склонение прилагательных (простое)",
+      "words": [
+        ["gut", "хороший (гу:т)"],
+        ["schlecht", "плохой (шлехьт)"],
+        ["neu", "новый (ной)"],
+        ["alt", "старый (альт)"],
+        ["interessant", "интересный (интэрэсАнт)"],
+        ["langweilig", "скучный (лАнгвайлихь)"]
+      ],
+      "phrases": [
+        ["Ein gutes Buch.", "Хорошая книга."],
+        ["Eine große Stadt.", "Большой город."],
+        ["Das ist ein schlechtes Wetter.", "Это плохая погода."]
+      ],
+      "review": [
+        ["rot", "красный (ро:т)"],
+        ["grün", "зелёный (грЮ:н)"]
+      ],
       "gram": {
-        "rule": "Прилагательное получает окончания в зависимости от артикля, рода и числа.",
-        "table": [["ein guter Freund","eine gute Freundin"],["das gute Essen","keine guten Bücher"]],
-        "examples": [["Ich habe einen guten Freund.","У меня есть хороший друг."],["Sie liest eine interessante Geschichte.","Она читает интересную историю."]]
+        "rule": "Когда прилагательное стоит перед существительным, оно получает окончание, зависящее от артикля, рода и падежа.",
+        "table": [
+          ["неопред. артикль: ein guter Freund", "опред. артикль: der gute Freund"],
+          ["неопред. артикль: eine gute Freundin", "опред. артикль: die gute Freundin"]
+        ],
+        "examples": [
+          ["Ich habe einen guten Freund.", "У меня есть хороший друг."],
+          ["Sie liest eine interessante Geschichte.", "Она читает интересную историю."]
+        ]
       },
-      "task": "Опишите 3 предмета с прилагательными."
+      "task": "Опишите 3 предмета, используя прилагательные перед существительным с неопределенным артиклем."
     },
     {
-      "title": "A1 Урок 20: Präsens и Perfekt (введение)",
-      "words": [["heute","сегодня"],["gestern","вчера"],["habe gesehen","видел"],["bin gegangen","шёл"],["arbeite","работаю"]],
-      "phrases": [["Ich arbeite heute.","Я работаю сегодня."],["Ich habe gestern gegessen.","Я поел вчера."],["Wir sind am Wochenende gefahren.","Мы ездили на выходных."]],
-      "review": [["ich arbeite","я работаю"],["du arbeitest","ты работаешь"]],
+      "title": "A1 Урок 20: Введение в Perfekt (прошедшее время)",
+      "words": [
+        ["gestern", "вчера (гЭстэрн)"],
+        ["gemacht", "сделал (гэмАхт)"],
+        ["gespielt", "играл (гэшпИ:льт)"],
+        ["gekauft", "купил (гэкАуфт)"],
+        ["gekocht", "приготовил (еду) (гэкОхт)"],
+        ["gegangen", "шёл (гэгАнгэн)"],
+        ["gefahren", "ехал (гэфА:рэн)"]
+      ],
+      "phrases": [
+        ["Ich habe gestern Fußball gespielt.", "Я вчера играл в футбол."],
+        ["Wir sind am Wochenende ins Kino gegangen.", "Мы на выходных ходили в кино."]
+      ],
+      "review": [
+        ["ich arbeite", "я работаю"],
+        ["du arbeitest", "ты работаешь"]
+      ],
       "gram": {
-        "rule": "Präsens описывает настоящее, Perfekt образуется mit haben/sein + Partizip II.",
-        "table": [["ich arbeite","du arbeitest","er arbeitet"],["ich habe gesehen","du hast gesehen","er hat gesehen"]],
-        "examples": [["Ich habe einen Film gesehen.","Я посмотрел фильм."],["Er ist nach Hause gegangen.","Он пошёл домой."]]
+        "rule": "Perfekt — разговорное прошедшее время. Образуется с помощью вспомогательного глагола haben или sein + Partizip II (причастие II).",
+        "table": [
+          ["haben + Partizip II (для большинства глаголов)"],
+          ["sein + Partizip II (для глаголов движения и смены состояния)"]
+        ],
+        "examples": [
+          ["Ich habe einen Film gesehen.", "Я посмотрел фильм."],
+          ["Er ist nach Hause gegangen.", "Он пошёл домой."]
+        ]
       },
-      "task": "Напишите 4 предложения: 2 im Präsens und 2 im Perfekt."
+      "task": "Напишите 4 предложения о том, что вы делали вчера: 2 с 'haben' и 2 с 'sein'."
     },
     {
       "title": "A1 Урок 21: Одежда и внешний вид",
-      "words": [["die Jacke","куртка"],["der Pullover","свитер"],["tragen","носить"],["anhaben","быть одетым"],["die Schuhe","обувь"]],
-      "phrases": [["Ich trage eine blaue Jacke.","Я ношу синюю куртку."],["Was hast du heute an?","Что на тебе сегодня надето?"],["Diese Schuhe sind neu.","Эти ботинки новые."]],
-      "review": [["rot","красный"],["grün","зелёный"]],
+      "words": [
+        ["die Kleidung", "одежда (ди клЯйдунг)"],
+        ["die Jacke", "куртка (ди Яке)"],
+        ["der Pullover", "свитер (дэа пулО:ва)"],
+        ["die Hose", "брюки (ди хО:зэ)"],
+        ["das Hemd", "рубашка (дас хэмт)"],
+        ["das Kleid", "платье (дас кляйт)"],
+        ["die Schuhe", "обувь (мн.ч.) (ди шУ:э)"],
+        ["tragen", "носить (трА:гэн)"],
+        ["anhaben", "быть одетым во что-то (Анха:бэн)"]
+      ],
+      "phrases": [
+        ["Ich trage eine blaue Jacke.", "Я ношу синюю куртку."],
+        ["Was hast du heute an?", "Что на тебе сегодня надето?"],
+        ["Diese Schuhe sind neu.", "Эти ботинки новые."]
+      ],
+      "review": [
+        ["rot", "красный (ро:т)"],
+        ["neu", "новый (ной)"]
+      ],
       "gram": {
-        "rule": "Сильный глагол 'tragen': ich trage, du trägst, er trägt.",
-        "table": [["ich trage","du trägst","er trägt"],["wir tragen","ihr tragt","sie tragen"]],
-        "examples": [["Wir tragen warme Pullover.","Мы носим тёплые свитеры."],["Er hat eine Jacke an.","Он одет в куртку."]]
+        "rule": "Глагол 'tragen' (носить) является сильным и меняет корневую гласную: ich trage, но du trägst, er/sie/es trägt.",
+        "table": [
+          ["ich trage", "du trägst", "er trägt"],
+          ["wir tragen", "ihr tragt", "sie tragen"]
+        ],
+        "examples": [
+          ["Wir tragen warme Pullover.", "Мы носим тёплые свитеры."],
+          ["Er hat eine neue Jacke an.", "На нем надета новая куртка."]
+        ]
       },
-      "task": "Опишите, во что вы сегодня одеты."
+      "task": "Опишите, во что вы сегодня одеты, в 3-4 предложениях."
     },
     {
       "title": "A1 Урок 22: Погода и времена года",
-      "words": [["das Wetter","погода"],["sonnig","солнечно"],["regnerisch","дождливо"],["der Sommer","лето"],["der Winter","зима"]],
-      "phrases": [["Heute ist es sonnig.","Сегодня солнечно."],["Es regnet im Herbst.","Осенью идёт дождь."],["Im Winter schneit es.","Зимой идёт снег."]],
-      "review": [["heute","сегодня"],["morgen","завтра"]],
+      "words": [
+        ["das Wetter", "погода (дас вЭта)"],
+        ["die Jahreszeit", "время года (ди Я:рэсцайт)"],
+        ["der Frühling", "весна (дэа фрЮ:линг)"],
+        ["der Sommer", "лето (дэа зОма)"],
+        ["der Herbst", "осень (дэа хэрпст)"],
+        ["der Winter", "зима (дэа вИнта)"],
+        ["es regnet", "идёт дождь (эс рЕ:гнэт)"],
+        ["es schneit", "идёт снег (эс шнайт)"],
+        ["die Sonne scheint", "солнце светит (ди зОнэ шайнт)"],
+        ["kalt / warm", "холодно / тепло (кальт / варм)"]
+      ],
+      "phrases": [
+        ["Wie ist das Wetter heute?", "Какая сегодня погода?"],
+        ["Heute ist es sonnig.", "Сегодня солнечно."],
+        ["Im Winter schneit es oft.", "Зимой часто идёт снег."]
+      ],
+      "review": [
+        ["heute", "сегодня (хОйтэ)"],
+        ["gestern", "вчера (гЭстэрн)"]
+      ],
       "gram": {
-        "rule": "Безличная конструкция: Es ist + прилагательное; Perfekt von 'regnen': es hat geregnet.",
-        "table": [["Es ist kalt.","Es ist warm."],["Es regnet.","Es schneit."]],
-        "examples": [["Es ist heute windig.","Сегодня ветрено."],["Morgen wird es regnen.","Завтра будет дождь."]]
+        "rule": "Для описания погоды используется безличная конструкция 'es'. С временами года используется предлог 'im' (in + dem).",
+        "table": [
+          ["Es ist kalt.", "Es ist warm."],
+          ["Es regnet.", "Es schneit."],
+          ["im Sommer", "im Herbst"]
+        ],
+        "examples": [
+          ["Es ist heute windig.", "Сегодня ветрено."],
+          ["Morgen wird es regnen.", "Завтра будет дождь."]
+        ]
       },
-      "task": "Опишите погоду на этой неделе."
+      "task": "Опишите погоду в вашем городе и ваше любимое время года."
     },
     {
       "title": "A1 Урок 23: Хобби и досуг",
-      "words": [["das Hobby","хобби"],["lesen","читать"],["malen","рисовать"],["tanzen","танцевать"]],
-      "phrases": [["Ich lese gern Bücher.","Я люблю читать книги."],["Er malt ein Bild.","Он рисует картину."],["Wir tanzen zusammen.","Мы танцуем вместе."]],
-      "review": [["können","мочь"],["wollen","хотеть"]],
+      "words": [
+        ["das Hobby", "хобби (дас хОби)"],
+        ["die Freizeit", "свободное время (ди фрАйцайт)"],
+        ["lesen", "читать (лЕ:зэн)"],
+        ["malen", "рисовать (мА:лен)"],
+        ["tanzen", "танцевать (тАнцен)"],
+        ["singen", "петь (зИнген)"],
+        ["Musik hören", "слушать музыку (музИ:к хЁ:рэн)"],
+        ["Sport treiben", "заниматься спортом (шпорт трАйбэн)"]
+      ],
+      "phrases": [
+        ["Was sind deine Hobbys?", "Какие у тебя хобби?"],
+        ["Mein Hobby ist Lesen.", "Моё хобби - чтение."],
+        ["Ich lese gern Bücher.", "Я люблю (охотно) читать книги."]
+      ],
+      "review": [
+        ["können", "мочь (кЁнэн)"],
+        ["wollen", "хотеть (вОлен)"]
+      ],
       "gram": {
-        "rule": "'gern' выражает предпочтение и идёт после глагола.",
-        "table": [["ich lese gern","du spielst gern"],["er fährt gern Fahrrad"]],
-        "examples": [["Sie kocht gern.","Она любит готовить."],["Tanzen wir gern?","Нравится ли нам танцевать?"]]
+        "rule": "Наречие 'gern' (охотно, с удовольствием) ставится после глагола и выражает предпочтение, заменяя конструкцию 'я люблю делать что-то'.",
+        "table": [
+          ["ich lese gern", "du spielst gern Fußball"],
+          ["er fährt gern Fahrrad", "sie tanzt gern"]
+        ],
+        "examples": [
+          ["Sie kocht gern.", "Она любит готовить."],
+          ["Hörst du gern Musik?", "Ты любишь слушать музыку?"]
+        ]
       },
-      "task": "Напишите 5 предложений о ваших хобби."
+      "task": "Напишите 5 предложений о своих хобби, используя наречие 'gern'."
     },
     {
       "title": "A1 Урок 24: Транспорт и поездки",
-      "words": [["der Zug","поезд"],["das Flugzeug","самолёт"],["fahren","ехать"],["fliegen","лететь"]],
-      "phrases": [["Ich fahre mit dem Zug.","Я еду на поезде."],["Wir fliegen nach Berlin.","Мы летим в Берлин."],["Er fährt mit dem Auto.","Он едет на машине."]],
-      "review": [["unterwegs","в пути"],["die Reise","путешествие"]],  
+      "words": [
+        ["der Verkehr", "транспорт, движение (дэа фэакЕ:а)"],
+        ["das Auto", "автомобиль (дас Ауто)"],
+        ["der Bus", "автобус (дэа бус)"],
+        ["der Zug", "поезд (дэа цу:к)"],
+        ["das Flugzeug", "самолёт (дас флУ:кцойк)"],
+        ["das Fahrrad", "велосипед (дас фА:рра:т)"],
+        ["fahren", "ехать (фА:рэн)"],
+        ["fliegen", "лететь (флИ:гэн)"],
+        ["die Haltestelle", "остановка (ди хАльтэштэле)"],
+        ["der Bahnhof", "вокзал (дэа бА:нхо:ф)"]
+      ],
+      "phrases": [
+        ["Ich fahre mit dem Bus.", "Я еду на автобусе."],
+        ["Wir fliegen nach Berlin.", "Мы летим в Берлин."],
+        ["Wo ist die nächste Haltestelle?", "Где следующая остановка?"]
+      ],
+      "review": [
+        ["unterwegs", "в пути (унтавЕ:кс)"],
+        ["die Reise", "путешествие (ди рАйзэ)"]
+      ],
       "gram": {
-        "rule": "'mit' + Dativ для видов транспорта.",
-        "table": [["mit dem Zug","mit dem Auto"],["mit dem Bus","mit dem Fahrrad"]],
-        "examples": [["Sie fährt mit der Straßenbahn.","Она едет на трамвае."],["Ich fliege mit dem Flugzeug.","Я лечу на самолёте."]]
+        "rule": "Для указания транспорта, на котором вы передвигаетесь, используется предлог 'mit' + Dativ.",
+        "table": [
+          ["mit dem Zug", "mit dem Auto"],
+          ["mit dem Bus", "mit dem Fahrrad"]
+        ],
+        "examples": [
+          ["Sie fährt mit der Straßenbahn.", "Она едет на трамвае."],
+          ["Ich fliege lieber mit dem Flugzeug.", "Я предпочитаю лететь на самолёте."]
+        ]
       },
-      "task": "Опишите вашу последнюю поездку."
+      "task": "Опишите вашу последнюю поездку или обычный путь на работу/учебу."
     },
     {
       "title": "A1 Урок 25: Здоровье и самочувствие",
-      "words": [["gesund","здоровый"],["krank","больной"],["sich fühlen","чувствовать себя"],["der Arzt","врач"],["das Medikament","лекарство"]],
-      "phrases": [["Ich fühle mich gut.","Я чувствую себя хорошо."],["Er ist krank.","Он болен."],["Sie geht zum Arzt.","Она идёт к врачу."]],
-      "review": [["haben","иметь"],["sein","быть"]],
+      "words": [
+        ["die Gesundheit", "здоровье (ди гезУнтхайт)"],
+        ["gesund", "здоровый (гезУнт)"],
+        ["krank", "больной (кранк)"],
+        ["sich fühlen", "чувствовать себя (зихь фЮ:лен)"],
+        ["der Arzt", "врач (дэа арцт)"],
+        ["das Krankenhaus", "больница (дас крАнкэнхаус)"],
+        ["das Medikament", "лекарство (дас медикамЭнт)"],
+        ["der Schmerz", "боль (дэа шмерц)"]
+      ],
+      "phrases": [
+        ["Ich fühle mich gut.", "Я чувствую себя хорошо."],
+        ["Er ist krank.", "Он болен."],
+        ["Sie geht zum Arzt.", "Она идёт к врачу."],
+        ["Ich habe Kopfschmerzen.", "У меня болит голова (головные боли)."]
+      ],
+      "review": [
+        ["haben", "иметь (хА:бэн)"],
+        ["sein", "быть (зайн)"]
+      ],
       "gram": {
-        "rule": "Возвратный глагол 'sich fühlen' требует Dativ.",
-        "table": [["ich fühle mich","du fühlst dich","er fühlt sich"],["wir fühlen uns","ihr fühlt euch","sie fühlen sich"]],
-        "examples": [["Ich fühle mich müde.","Я чувствую себя усталым."],["Wir fühlen uns besser.","Мы чувствуем себя лучше."]]
+        "rule": "Возвратный глагол 'sich fühlen' (чувствовать себя). Возвратная частица 'sich' изменяется по лицам.",
+        "table": [
+          ["ich fühle mich", "du fühlst dich", "er/sie/es fühlt sich"],
+          ["wir fühlen uns", "ihr fühlt euch", "sie/Sie fühlen sich"]
+        ],
+        "examples": [
+          ["Ich fühle mich müde.", "Я чувствую себя усталым."],
+          ["Wie fühlen Sie sich?", "Как Вы себя чувствуете?"]
+        ]
       },
-      "task": "Опишите ваше самочувствие сегодня."
+      "task": "Опишите ваше самочувствие сегодня или придумайте диалог с врачом."
     },
     {
       "title": "A1 Урок 26: Ежедневные рутины",
-      "words": [["aufstehen","вставать"],["frühstücken","завтракать"],["arbeiten","работать"],["fernsehen","смотреть телевизор"]],
-      "phrases": [["Ich stehe um 7 Uhr auf.","Я встаю в 7 часов."],["Er frühstückt um 8 Uhr.","Он завтракает в 8 часов."],["Am Abend sehe ich fern.","Вечером я смотрю телевизор."]],
-      "review": [["heute","сегодня"],["gestern","вчера"]],
+      "words": [
+        ["der Alltag", "будни, повседневная жизнь (дэа Аль-так)"],
+        ["aufstehen", "вставать (Ауфштэ:эн)"],
+        ["frühstücken", "завтракать (фрЮ:штюкэн)"],
+        ["arbeiten", "работать (Арбайтэн)"],
+        ["fernsehen", "смотреть телевизор (фЭрнзэ:эн)"],
+        ["schlafen gehen", "идти спать (шлА:фэн гЭ:эн)"],
+        ["kochen", "готовить (кОхэн)"],
+        ["putzen", "убирать, чистить (пУтцен)"]
+      ],
+      "phrases": [
+        ["Ich stehe um 7 Uhr auf.", "Я встаю в 7 часов."],
+        ["Er frühstückt um 8 Uhr.", "Он завтракает в 8 часов."],
+        ["Am Abend sehe ich fern.", "Вечером я смотрю телевизор."]
+      ],
+      "review": [
+        ["heute", "сегодня (хОйтэ)"],
+        ["gestern", "вчера (гЭстэрн)"]
+      ],
       "gram": {
-        "rule": "Verben der Routine stehen im Präsens.",
-        "table": [["ich stehe auf","du stehst auf","er steht auf"],["wir frühstücken","ihr frühstückt","sie frühstücken"]],
-        "examples": [["Ich gehe zur Arbeit.","Я иду на работу."],["Er liest die Zeitung.","Он читает газету."]]
+        "rule": "Глаголы с отделяемыми приставками (напр., auf-stehen, fern-sehen). В настоящем времени приставка отделяется и уходит в конец предложения.",
+        "table": [
+          ["aufstehen -> Ich stehe auf."],
+          ["einkaufen -> Du kaufst ein."]
+        ],
+        "examples": [
+          ["Ich rufe dich später an.", "Я позвоню тебе позже (an-rufen)."],
+          ["Der Unterricht fängt um 9 Uhr an.", "Занятие начинается в 9 часов (an-fangen)."]
+        ]
       },
-      "task": "Опишите свой распорядок дня."
+      "task": "Опишите свой обычный распорядок дня, используя минимум 3 глагола с отделяемыми приставками."
     },
     {
-      "title": "A1 Урок 27: Составление вопросов",
-      "words": [["wer","кто"],["was","что"],["wann","когда"],["wo","где"]],
-      "phrases": [["Wer ist das?","Кто это?"],["Was machst du morgen?","Что ты делаешь завтра?"],["Wo wohnst du?","Где ты живёшь?"]],
-      "review": [["Fragewörter","вопросительные слова"],["Inversion","инверсия"]],
+      "title": "A1 Урок 27: Составление вопросов (обзор)",
+      "words": [
+        ["die Frage", "вопрос (ди фрА:гэ)"],
+        ["die Antwort", "ответ (ди Антворт)"],
+        ["fragen", "спрашивать (фрА:гэн)"],
+        ["antworten", "отвечать (Антвортэн)"],
+        ["stimmt das?", "это верно? (штимт дас?)"]
+      ],
+      "phrases": [
+        ["Wer ist das?", "Кто это?"],
+        ["Was machst du morgen?", "Что ты делаешь завтра?"],
+        ["Wohnst du hier?", "Ты живешь здесь?"]
+      ],
+      "review": [
+        ["Fragewörter", "вопросительные слова (фрА:гэвёртер)"],
+        ["Inversion", "инверсия (инверзиО:н)"]
+      ],
       "gram": {
-        "rule": "W-Fragen beginnen mit Fragewort, Ja/Nein Fragen ohne Fragewort mit Inversion.",
-        "table": [["W + V + S","V + S + ..."],["Wann kommst du?","Kommst du?"]],
-        "examples": [["Wie heißt er?","Как его зовут?"],["Kommst du morgen?","Ты придёшь завтра?"]]
+        "rule": "Два основных типа вопросов: W-Fragen (с вопросительным словом) и Ja/Nein-Fragen (без вопросительного слова, с глаголом на первом месте).",
+        "table": [
+          ["W-Frage: W-Wort + Verb + Subjekt ... ?"],
+          ["Ja/Nein-Frage: Verb + Subjekt + ... ?"]
+        ],
+        "examples": [
+          ["Woher kommst du?", "Откуда ты?"],
+          ["Kommst du aus Deutschland?", "Ты из Германии?"]
+        ]
       },
-      "task": "Напишите 5 вопросов."
+      "task": "Напишите 3 вопроса типа W-Frage и 3 вопроса типа Ja/Nein-Frage."
     },
     {
-      "title": "A1 Урок 28: Да/Нет вопросы и ответы",
-      "words": [["ja","да"],["nein","нет"],["doch","ведь"],["vielleicht","возможно"]],
-      "phrases": [["Hast du Zeit?","У тебя есть время?"],["Ja, ich habe Zeit.","Да, у меня есть время."],["Nein, ich habe keine Zeit.","Нет, у меня нет времени."]],
-      "review": [["Inversion","инверсия"],["V + S","порядок слов"]],
+      "title": "A1 Урок 28: Ответы Да/Нет/Ведь",
+      "words": [
+        ["ja", "да (я)"],
+        ["nein", "нет (найн)"],
+        ["doch", "ведь, да нет же (дох)"],
+        ["genau", "точно (генАу)"],
+        ["vielleicht", "возможно (филЯйхьт)"],
+        ["sicher", "конечно, уверен (зИхьа)"]
+      ],
+      "phrases": [
+        ["- Hast du Zeit? - Ja, ich habe Zeit.", "- У тебя есть время? - Да, у меня есть время."],
+        ["- Kommst du nicht? - Doch, ich komme!", "- Ты не придёшь? - Да нет же, приду!"]
+      ],
+      "review": [
+        ["Inversion", "инверсия (инверзиО:н)"],
+        ["Verb + Subjekt", "порядок слов"]
+      ],
       "gram": {
-        "rule": "Ja/Nein Fragen: V + S; ответы: ja/nein/dochs.",
-        "table": [["V + S + ...","Ja, S + V"],["Nein, S + V","Doch, S + V"]],
-        "examples":[["Kaufst du ein Buch?","Ты покупаешь книгу?"],["Nein, ich kaufe kein Buch.","Нет, я не покупаю книгу."]]
+        "rule": "'Doch' используется для опровержения отрицательного вопроса или утверждения.",
+        "table": [
+          ["Вопрос: Kommst du?", "Ответ: Ja / Nein."],
+          ["Вопрос: Kommst du nicht?", "Ответ: Doch (если да) / Nein (если нет)."]
+        ],
+        "examples": [
+          ["- Du hast keine Geschwister, oder? - Doch, ich habe einen Bruder.", "- У тебя нет братьев/сестер, верно? - Да нет же, у меня есть брат."]
+        ]
       },
-      "task": "Составьте 3 Ja/Nein вопросов и ответьте на них."
+      "task": "Придумайте 3 диалога, в которых уместно было бы использовать 'ja', 'nein' и 'doch'."
     },
     {
-      "title": "A1 Урок 29: Наречия места, времени, образа действия",
-      "words": [["hier","здесь"],["dort","там"],["heute","сегодня"],["gestern","вчера"],["schnell","быстро"],["langsam","медленно"]],
-      "phrases": [["Ich wohne hier.","Я живу здесь."],["Er arbeitet schnell.","Он работает быстро."],["Wir kommen morgen.","Мы придём завтра."]],
-      "review": [["Adverbien","наречия"],["Präpositionen","предлоги"]],
+      "title": "A1 Урок 29: Наречия места и времени",
+      "words": [
+        ["das Adverb", "наречие (дас адвЭрп)"],
+        ["hier / dort", "здесь / там (хиа / дорт)"],
+        ["links / rechts", "слева / справа (линкс / рэхьтс)"],
+        ["heute / gestern / morgen", "сегодня / вчера / завтра"],
+        ["jetzt / dann", "сейчас / затем (йецт / дан)"],
+        ["immer / oft / manchmal / nie", "всегда / часто / иногда / никогда"]
+      ],
+      "phrases": [
+        ["Ich wohne hier.", "Я живу здесь."],
+        ["Wir kommen morgen.", "Мы придём завтра."],
+        ["Ich trinke immer Kaffee.", "Я всегда пью кофе."]
+      ],
+      "review": [
+        ["Adverbien", "наречия (адвЭрбиэн)"],
+        ["Präpositionen", "предлоги (прэпозициО:нэн)"]
+      ],
       "gram": {
-        "rule": "Наречия stehen после глагола или в конце предложения.",
-        "table": [["Ort: V + Adv","Zeit: V + Adv"],["Art und Weise: V + Adv"]],
-        "examples": [["Sie singt laut.","Она поёт громко."],["Ich warte draußen.","Я жду снаружи."]]
+        "rule": "Наречия времени и места обычно стоят после глагола. Стандартный порядок в предложении: Время - Причина - Образ действия - Место (TeKaMoLo).",
+        "table": [
+          ["Ich fahre heute (Te) mit dem Auto (Mo) nach Berlin (Lo)."]
+        ],
+        "examples": [
+          ["Sie singt oft sehr laut.", "Она часто поёт очень громко."],
+          ["Ich warte draußen auf dich.", "Я жду тебя снаружи."]
+        ]
       },
-      "task": "Напишите 6 предложений с разными наречиями."
+      "task": "Напишите 6 предложений, используя разные наречия из списка."
     },
     {
-      "title": "A1 Урок 30: Итоговый урок A1: повторение всего",
-      "words": [["Vergangenheit","прошлое"],["Gegenwart","настоящее"],["Zukunft","будущее"],["wiederholen","повторять"],["Frage","вопрос"]],
-      "phrases": [["Ich habe viel gelernt.","Я многому научился."],["Ich kann einfache Sätze bilden.","Я могу строить простые предложения."],["Ich verstehe kurze Texte.","Я понимаю короткие тексты."]],
-      "review": [["können","мочь"],["wollen","хотеть"]],
+      "title": "A1 Урок 30: Итоговый урок A1",
+      "words": [
+        ["die Vergangenheit", "прошлое (ди фэагАнгэнхайт)"],
+        ["die Gegenwart", "настоящее (ди гЕ:гэнварт)"],
+        ["die Zukunft", "будущее (ди цУ:кунфт)"],
+        ["wiederholen", "повторять (ви:даО:лен)"],
+        ["alles", "всё (Алес)"],
+        ["fertig", "готов (фЭртихь)"]
+      ],
+      "phrases": [
+        ["Ich habe viel gelernt.", "Я многому научился."],
+        ["Ich kann einfache Sätze bilden.", "Я могу строить простые предложения."],
+        ["Ich verstehe kurze Texte.", "Я понимаю короткие тексты."]
+      ],
+      "review": [
+        ["können/wollen/müssen", "мочь/хотеть/быть должным"],
+        ["Präsens/Perfekt", "настоящее/прошедшее"]
+      ],
       "gram": {
-        "rule": "Повторение основных конструкций: Präsens, Perfekt, Fragen, Modalverben.",
-        "table": [["ich bin / ich habe","kann / will"],["Präsens / Perfekt","W-Fragen / Ja/Nein"]],
-        "examples": [["Ich habe gestern gearbeitet.","Я работал вчера."],["Kannst du mir helfen?","Можешь мне помочь?"]]
+        "rule": "Повторение ключевых конструкций: порядок слов в простом предложении, W-Fragen и Ja/Nein-Fragen, использование модальных глаголов, предлоги с Akkusativ и Dativ, образование Perfekt.",
+        "table": [
+          ["S + V + O", "W-Wort + V + S + O"],
+          ["S + Modalverb + ... + Infinitiv"]
+        ],
+        "examples": [
+          ["Ich habe gestern gearbeitet.", "Я работал вчера."],
+          ["Kannst du mir bitte helfen?", "Можешь мне, пожалуйста, помочь?"]
+        ]
       },
-      "task": "Напишите текст о себе (5–7 предложений), используя представленные темы."
+      "task": "Напишите короткий рассказ о себе (5–7 предложений), используя как можно больше тем, пройденных на уровне A1."
     }
   ],
   "A2": [
     {
-      "title": "A2 Урок 1: Perfekt (углубление)",
-      "words": [["gestern","вчера"],["gearbeitet","работал"],["gelernt","учил"],["gesehen","видел"],["gefahren","ездил"]],
-      "phrases": [["Ich habe ein Buch gelesen.","Я прочитал книгу."],["Wir sind nach Berlin gefahren.","Мы поехали в Берлин."],["Was hast du gestern gemacht?","Что ты делал вчера?"]],
-      "review": [["Partizip II","причастие II"],["haben/sein","иметь/быть"]],
-      "gram": {
-        "rule": "Perfekt: haben/sein + Partizip II; 'sein' для движения и смены состояния.",
-        "table": [["ich habe gemacht","du hast gemacht"],["ich bin gegangen","du bist gegangen"]],
-        "examples": [["Ich habe gegessen.","Я поел."],["Er ist gekommen.","Он пришёл."]]
-      },
-      "task": "Напишите 5 предложений о прошедших действиях: 3 с 'haben', 2 с 'sein'."
+        "title": "A2 Урок 1: Perfekt (углубление)",
+        "words": [
+            ["gestern", "вчера (гЭстэрн)"],
+            ["vorgestern", "позавчера (фО:агэстэрн)"],
+            ["gearbeitet", "работал (геАрбайтэт)"],
+            ["gelernt", "учил (геЛэрнт)"],
+            ["gesehen", "видел (геЗЭ:эн)"],
+            ["geschlafen", "спал (гешлА:фэн)"],
+            ["gefahren", "ездил (гефА:рэн)"],
+            ["gegangen", "шёл (гегАнгэн)"],
+            ["gekommen", "пришёл (гекОмэн)"]
+        ],
+        "phrases": [
+            ["Ich habe ein Buch gelesen.", "Я прочитал книгу."],
+            ["Wir sind nach Berlin gefahren.", "Мы поехали в Берлин."],
+            ["Was hast du gestern gemacht?", "Что ты делал вчера?"]
+        ],
+        "review": [
+            ["Partizip II", "причастие II (партицИп цвай)"],
+            ["haben/sein", "иметь/быть (хА:бэн/зайн)"]
+        ],
+        "gram": {
+            "rule": "Perfekt: haben/sein + Partizip II. Вспомогательный глагол 'sein' используется с глаголами движения (fahren, gehen) и смены состояния (aufstehen - вставать).",
+            "table": [
+                ["ich habe gemacht", "du hast gemacht"],
+                ["ich bin gegangen", "du bist gegangen"]
+            ],
+            "examples": [
+                ["Ich habe gestern gut geschlafen.", "Я вчера хорошо спал."],
+                ["Er ist zu spät gekommen.", "Он пришёл слишком поздно."]
+            ]
+        },
+        "task": "Напишите 5 предложений о своих прошедших действиях: 3 с 'haben' и 2 с 'sein'."
     },
     {
-      "title": "A2 Урок 2: Präteritum глаголов haben, sein, werden",
-      "words": [["ich war","я был"],["du warst","ты был"],["ich hatte","я имел"],["ich wurde","я стал"]],
-      "phrases": [["Früher war ich Student.","Раньше я был студентом."],["Es wurde spät.","Становилось поздно."],["Hatten Sie Zeit?","У вас было время?"]],
-      "review": [["Perfekt","перфект"],["Präsens","настоящее"]],
-      "gram": {
-        "rule": "Präteritum – простое прошедшее, часто в письменной речи.",
-        "table": [["ich war","du warst","er war"],["ich hatte","du hattest","er hatte"]],
-        "examples": [["Ich war müde.","Я был усталым."],["Sie hatte Glück.","Ей повезло."]]
-      },
-      "task": "Составьте 4 предложения im Präteritum."
+        "title": "A2 Урок 2: Präteritum (простое прошедшее)",
+        "words": [
+            ["ich war", "я был (их ва:р)"],
+            ["du warst", "ты был (ду ва:рст)"],
+            ["ich hatte", "я имел (их хАтэ)"],
+            ["du hattest", "ты имел (ду хАтэст)"],
+            ["ich konnte", "я мог (их кОнтэ)"],
+            ["ich wollte", "я хотел (их вОльтэ)"],
+            ["damals", "тогда, в то время (дА:мальс)"],
+            ["früher", "раньше (фрЮ:а)"]
+        ],
+        "phrases": [
+            ["Früher war ich Student.", "Раньше я был студентом."],
+            ["Ich hatte keine Zeit.", "У меня не было времени."],
+            ["Er wollte nicht gehen.", "Он не хотел идти."]
+        ],
+        "review": [
+            ["Perfekt", "перфект (пЭрфэкт)"],
+            ["Präsens", "настоящее время (прЭ:зэнс)"]
+        ],
+        "gram": {
+            "rule": "Präteritum – простое прошедшее время, часто используется в письменной речи (книги, рассказы), а также с глаголами sein, haben и модальными глаголами.",
+            "table": [
+                ["sein: ich war, du warst, er war"],
+                ["haben: ich hatte, du hattest, er hatte"],
+                ["wollen: ich wollte, du wolltest, er wollte"]
+            ],
+            "examples": [
+                ["Ich war müde.", "Я был уставшим."],
+                ["Sie hatte Glück.", "Ей повезло."]
+            ]
+        },
+        "task": "Составьте 4 предложения в Präteritum с глаголами sein, haben, können и wollen."
     },
     {
-      "title": "A2 Урок 3: Сложные предлоги с Dativ/Akkusativ",
-      "words": [["trotz","несмотря на"],["während","во время"],["wegen","из-за"],["anstatt","вместо"],
-      ["entlang","вдоль"]],
-      "phrases": [["Während des Urlaubs waren wir müde.","Во время отпуска мы были уставшими."],["Wegen des Wetters bleiben wir zu Hause.","Из-за погоды остаёмся дома."],["Trotz des Regens gehen wir spazieren.","Несмотря на дождь, мы гуляем."]],
-      "review": [["Genitiv","родительный"],["Dativ","дательный"]],
+      "title": "A2 Урок 3: Предлоги с Dativ и Akkusativ (обзор)",
+      "words": [
+        ["trotz", "несмотря на (троц)"],
+        ["während", "во время (вЭ:рэнт)"],
+        ["wegen", "из-за (вЕ:гэн)"],
+        ["entlang", "вдоль (энтлАнг)"],
+        ["um ... herum", "вокруг чего-то (ум ... хэрУм)"]
+      ],
+      "phrases": [
+        ["Während des Urlaubs waren wir müde.", "Во время отпуска мы были уставшими."],
+        ["Wegen des Wetters bleiben wir zu Hause.", "Из-за погоды остаёмся дома."],
+        ["Trotz des Regens gehen wir spazieren.", "Несмотря на дождь, мы гуляем."]
+      ],
+      "review": [
+        ["Genitiv", "родительный падеж (гЕ:нитив)"],
+        ["Dativ", "дательный падеж (дА:тив)"]
+      ],
       "gram": {
-        "rule": "Сложные Präpositionen требуют указанного падежа (Genitiv или Dativ).",
-        "table": [["wegen + Gen.","während + Gen."],["mitten in + Dativ","auf Grund + Gen."]],
-        "examples": [["Mitten in der Nacht.","Посреди ночи."],["Anstatt des Buchs nehme ich den Film.","Вместо книги я беру фильм."]]
+        "rule": "Некоторые предлоги требуют определенного падежа. Wegen, während, trotz обычно используются с Genitiv, но в разговорной речи часто с Dativ.",
+        "table": [
+          ["wegen + Genitiv (письм.)", "wegen + Dativ (разг.)"],
+          ["während + Genitiv"]
+        ],
+        "examples": [
+          ["Mitten in der Nacht.", "Посреди ночи."],
+          ["Anstatt des Buches nehme ich den Film.", "Вместо книги я беру фильм."]
+        ]
       },
-      "task": "Напишите 5 предложений mit komplexen Präpositionen."
+      "task": "Напишите 4 предложения, используя предлоги wegen, während, trotz, entlang."
     },
     {
-      "title": "A2 Урок 4: Модальные глаголы в прошедшем времени",
-      "words": [["konnte","мог"],["musste","должен был"],["wollte","хотел"],["durfte","имел разрешение"],["sollte","должен был"]],
-      "phrases": [["Ich konnte gestern nicht kommen.","Вчера я не мог прийти."],["Wir mussten früh aufstehen.","Нам пришлось рано встать."],["Er wollte bleiben.","Он хотел остаться."]],
-      "review": [["können","мочь"],["müssen","должен"]],
+      "title": "A2 Урок 4: Модальные глаголы в Präteritum",
+      "words": [
+        ["konnte", "мог (кОнтэ)"],
+        ["musste", "должен был (мУстэ)"],
+        ["wollte", "хотел (вОльтэ)"],
+        ["durfte", "имел разрешение (дУрфтэ)"],
+        ["sollte", "следовало (зОльтэ)"],
+        ["mochte", "нравилось (мОхьтэ)"]
+      ],
+      "phrases": [
+        ["Ich konnte gestern nicht kommen.", "Вчера я не мог прийти."],
+        ["Wir mussten früh aufstehen.", "Нам пришлось рано встать."],
+        ["Er wollte bleiben.", "Он хотел остаться."]
+      ],
+      "review": [
+        ["können", "мочь (кЁнэн)"],
+        ["müssen", "быть должным (мЮсэн)"]
+      ],
       "gram": {
-        "rule": "Präteritum модальных: ich konnte, du konntest и т. д.",
-        "table": [["ich konnte","du konntest","er konnte"],["wir mussten","ihr musstet","sie mussten"]],
-        "examples": [["Sie durfte nicht rein.","Ей не разрешили войти."],["Er sollte lernen.","Он должен был учиться."]]
+        "rule": "В прошедшем времени (особенно в письменной речи и рассказах) модальные глаголы чаще используются в форме Präteritum, чем в Perfekt.",
+        "table": [
+          ["ich konnte", "du konntest", "er konnte"],
+          ["wir mussten", "ihr musstet", "sie mussten"]
+        ],
+        "examples": [
+          ["Sie durfte nicht ins Kino gehen.", "Ей не разрешили пойти в кино."],
+          ["Ich sollte meine Hausaufgaben machen.", "Мне следовало делать домашнее задание."]
+        ]
       },
-      "task": "Сравните Perfekt и Präteritum: 3 предложения в Perfekt и 3 в Präteritum с модальными глаголами."
+      "task": "Напишите 5 предложений в Präteritum с разными модальными глаголами."
     },
     {
       "title": "A2 Урок 5: Возвратные глаголы",
-      "words": [["sich waschen","мыться"],["sich freuen","радоваться"],["sich erinnern","вспоминать"],["sich setzen","садиться"]],
-      "phrases": [["Ich wasche mich.","Я умываюсь."],["Er freut sich.","Он радуется."],["Wir erinnern uns daran.","Мы вспоминаем об этом."]],
-      "review": [["Fühlen","чувствовать"],["haben","иметь"]],
+      "words": [
+        ["sich waschen", "умываться (зихь вАшэн)"],
+        ["sich freuen", "радоваться (зихь фрОйен)"],
+        ["sich erinnern", "вспоминать (зихь эаИнэрн)"],
+        ["sich setzen", "садиться (зихь зЭтцен)"],
+        ["sich treffen", "встречаться (зихь трЭфэн)"],
+        ["sich anziehen", "одеваться (зихь Ан-ци:эн)"]
+      ],
+      "phrases": [
+        ["Ich wasche mich.", "Я умываюсь."],
+        ["Er freut sich auf die Party.", "Он рад предстоящей вечеринке."],
+        ["Wir treffen uns um 8 Uhr.", "Мы встречаемся в 8 часов."]
+      ],
+      "review": [
+        ["sich fühlen", "чувствовать себя (зихь фЮ:лен)"],
+        ["haben", "иметь (хА:бэн)"]
+      ],
       "gram": {
-        "rule": "Возвратные глаголы требуют личного местоимения в Dativ или Akkusativ.",
-        "table": [["ich wasche mich","du wäschst dich","er wäscht sich"],["wir setzen uns","ihr setzt euch","sie setzen sich"]],
-        "examples": [["Ich erinnere mich.","Я вспоминаю."],["Sie freut sich darauf.","Она этому рада."]]
+        "rule": "Возвратное местоимение 'sich' изменяется по лицам и числам. В большинстве случаев оно стоит в Akkusativ.",
+        "table": [
+          ["Akkusativ: mich, dich, sich"],
+          ["Akkusativ: uns, euch, sich"]
+        ],
+        "examples": [
+          ["Ich erinnere mich an dich.", "Я вспоминаю о тебе."],
+          ["Setzen Sie sich, bitte!", "Садитесь, пожалуйста!"]
+        ]
       },
-      "task": "Составьте 5 предложений с возвратными глаголами."
+      "task": "Составьте 5 предложений с разными возвратными глаголами."
     },
     {
-      "title": "A2 Урок 6: Прилагательное склонение",
-      "words": [["der gute Mann","хороший мужчина"],["die schöne Frau","красивая женщина"],["ein junges Kind","молодой ребёнок"],["kein alter Baum","никакого старого дерева"]],
-      "phrases": [["Ein netter Freund.","Неплохой друг."],["Ich kaufe frisches Brot.","Я покупаю свежий хлеб."],["Keine alten Bücher.","Никаких старых книг."]],
-      "review": [["Starke Deklination","сильное склонение"],["schwache Deklination","слабое"]],
+      "title": "A2 Урок 6: Склонение прилагательных (Adjektivdeklination)",
+      "words": [
+        ["der gute Mann", "хороший мужчина"],
+        ["die schöne Frau", "красивая женщина"],
+        ["ein junges Kind", "молодой ребёнок"],
+        ["frisches Brot", "свежий хлеб (без артикля)"],
+        ["nette Leute", "милые люди (мн.ч.)"]
+      ],
+      "phrases": [
+        ["Ein netter Freund hat mir geholfen.", "Милый друг мне помог."],
+        ["Ich kaufe frisches Brot.", "Я покупаю свежий хлеб."],
+        ["Ich sehe einen alten Mann.", "Я вижу старого мужчину."]
+      ],
+      "review": [
+        ["stark", "сильный (штарк)"],
+        ["schwach", "слабый (швах)"]
+      ],
       "gram": {
-        "rule": "Прилагательное получает окончания в зависимости от артикля и падежа.",
-        "table": [["der gute Mann","den guten Mann"],["ein guter Mann","einen guten Mann"]],
-        "examples": [["Ich sehe den alten Mann.","Я вижу старика."],["Er liest ein interessantes Buch.","Он читает интересную книгу."]]
+        "rule": "Прилагательное получает разные окончания в зависимости от того, стоит ли перед ним определенный, неопределенный артикль или артикля нет (сильное, слабое и смешанное склонение).",
+        "table": [
+          ["опред. артикль: der alte Mann (N.)", "den alten Mann (A.)"],
+          ["неопред. артикль: ein alter Mann (N.)", "einen alten Mann (A.)"],
+          ["без артикля: alter Wein (N.)", "alten Wein (A.)"]
+        ],
+        "examples": [
+          ["Er liest ein interessantes Buch.", "Он читает интересную книгу."],
+          ["Guter Wein ist teuer.", "Хорошее вино - дорогое."]
+        ]
       },
-      "task": "Напишите 5 предложений mit Deklination der Adjektive."
+      "task": "Напишите 5 предложений, используя прилагательные с разными типами артиклей."
     },
     {
       "title": "A2 Урок 7: Придаточные предложения (weil, dass, wenn)",
-      "words": [["weil","потому что"],["obwohl","хотя"],["dass","что"],["wenn","если"]],
-      "phrases": [["Ich lerne, weil ich reisen möchte.","Я учу, потому что хочу путешествовать."],["Obwohl es regnet, gehe ich raus.","Хотя идёт дождь, я выхожу."],["Er sagt, dass er kommt.","Он говорит, что придёт."]],
-      "review": [["weil","потому что"],["dass","что"]],
+      "words": [
+        ["weil", "потому что (вайль)"],
+        ["dass", "что (дас)"],
+        ["wenn", "если, когда (вэн)"],
+        ["obwohl", "хотя (обвО:ль)"],
+        ["der Satz", "предложение (дэа зац)"]
+      ],
+      "phrases": [
+        ["Ich lerne Deutsch, weil ich reisen möchte.", "Я учу немецкий, потому что хочу путешествовать."],
+        ["Ich weiß, dass du kommst.", "Я знаю, что ты придёшь."],
+        ["Wenn das Wetter gut ist, gehen wir spazieren.", "Если погода будет хорошей, мы пойдём гулять."]
+      ],
+      "review": [
+        ["weil", "потому что (вайль)"],
+        ["dass", "что (дас)"]
+      ],
       "gram": {
-        "rule": "Придаточные с союзом → Verb am Satzende.",
-        "table": [["weil + S + ... + V"],["dass + S + ... + V"],["wenn + S + ... + V"],["obwohl + S + ... + V"]],
-        "examples": [["Wenn ich Zeit habe, helfe ich dir.","Если у меня есть время, я помогу тебе."],["Obwohl er müde ist, lernt er weiter.","Хотя он устал, он продолжает учиться."]]
+        "rule": "В придаточных предложениях, которые вводятся этими союзами, глагол всегда уходит на самое последнее место.",
+        "table": [
+          ["... , weil ich dich mag."],
+          ["... , dass er müde ist."],
+          ["... , wenn du Zeit hast."]
+        ],
+        "examples": [
+          ["Er kommt nicht, weil sein Auto kaputt ist.", "Он не придет, потому что его машина сломана."],
+          ["Obwohl er müde ist, lernt er weiter.", "Хотя он устал, он продолжает учиться."]
+        ]
       },
-      "task": "Составьте 4 сложноподчинённых предложения."
+      "task": "Составьте 4 сложноподчинённых предложения, используя союзы weil, dass, wenn, obwohl."
     },
     {
-      "title": "A2 Урок 8: Порядок слов в главном и придаточном предложении",
-      "words": [["Hauptsatz","главное предложение"],["Nebensatz","придаточное"],["dann","затем"],["weil","потому что"]],
-      "phrases": [["Ich bleibe zu Hause, weil ich krank bin.","Я остаюсь дома, потому что болен."],["Er kommt nicht, denn er ist müde.","Он не придёт, так как устал."]],
-      "review": [["Verb Zweite Stelle","глагол на 2-м месте"],["Verb Ende","глагол в конце"]],
+      "title": "A2 Урок 8: Порядок слов (Hauptsatz vs Nebensatz)",
+      "words": [
+        ["der Hauptsatz", "главное предложение (хАуптзац)"],
+        ["der Nebensatz", "придаточное предложение (нЕ:бэнзац)"],
+        ["die Wortfolge", "порядок слов (вОртфольгэ)"],
+        ["deshalb", "поэтому (дэсхАльп)"],
+        ["trotzdem", "несмотря на это (троцдЕ:м)"]
+      ],
+      "phrases": [
+        ["Ich bleibe zu Hause, weil ich krank bin.", "Я остаюсь дома, потому что болен."],
+        ["Weil ich krank bin, bleibe ich zu Hause.", "Так как я болен, я остаюсь дома."]
+      ],
+      "review": [
+        ["Verb an Position 2", "глагол на 2-м месте"],
+        ["Verb am Ende", "глагол в конце"]
+      ],
       "gram": {
-        "rule": "В Hauptsatz Verb an 2. Stelle; в Nebensatz Verb am Ende.",
-        "table": [["Haupt: S + V + ..."],["Nebens.: ... + V"]],
-        "examples": [["Wenn es regnet, bleibe ich zuhause.","Если идёт дождь, я остаюсь дома."],["Ich denke, dass er kommt.","Я думаю, что он придёт."]]
+        "rule": "В главном предложении глагол на 2-м месте. В придаточном - в конце. Если придаточное стоит перед главным, то главное начинается с глагола.",
+        "table": [
+          ["Hauptsatz, Nebensatz."],
+          ["Nebensatz, Verb + Subjekt ... ."]
+        ],
+        "examples": [
+          ["Wenn es regnet, bleibe ich zu Hause.", "Если идёт дождь, я остаюсь дома."],
+          ["Ich bin müde, deshalb gehe ich schlafen.", "Я устал, поэтому иду спать."]
+        ]
       },
-      "task": "Преобразуйте 5 Hauptsätze в конструкции с Nebensätzen."
+      "task": "Преобразуйте 2 простых предложения в одно сложное, меняя их местами."
     },
     {
-      "title": "A2 Урок 9: Сравнительная и превосходная степень прилагательных",
-      "words": [["größer","больше"],["am größten","самый большой"],["besser","лучше"],["am besten","лучше всего"]],
-      "phrases": [["Ein Berg ist größer als ein Hügel.","Гора больше холма."],["Sie ist am klügsten.","Она самая умная."],["Er fährt besser.","Он ездит лучше."]],
-      "review": [["gut","хороший"],["groß","большой"]],
+      "title": "A2 Урок 9: Степени сравнения прилагательных",
+      "words": [
+        ["groß, größer, am größten", "большой, больше, самый большой"],
+        ["gut, besser, am besten", "хороший, лучше, самый лучший"],
+        ["viel, mehr, am meisten", "много, больше, больше всего"],
+        ["schnell", "быстрый (шнэль)"],
+        ["langsam", "медленный (лАнгзам)"],
+        ["teuer", "дорогой (тОйа)"],
+        ["billig", "дешевый (бИлихь)"]
+      ],
+      "phrases": [
+        ["Ein Berg ist größer als ein Hügel.", "Гора больше, чем холм."],
+        ["Sie ist die klügste Schülerin.", "Она самая умная ученица."],
+        ["Er fährt schneller als ich.", "Он едет быстрее меня."]
+      ],
+      "review": [
+        ["gut", "хороший (гу:т)"],
+        ["groß", "большой (гро:с)"]
+      ],
       "gram": {
-        "rule": "Komparativ mit -er, Superlativ mit am -sten.",
-        "table": [["schneller, am schnellsten"],["kleiner, am kleinsten"]],
-        "examples": [["Das Auto ist schneller als das Fahrrad.","Машина быстрее велосипеда."],["Er ist am stärksten.","Он самый сильный."]]
+        "rule": "Сравнительная степень (Komparativ) образуется с помощью суффикса -er. Превосходная (Superlativ) - с помощью am ...-sten или определенного артикля + -ste.",
+        "table": [
+          ["schnell -> schneller -> am schnellsten"],
+          ["gut -> besser -> am besten (исключение)"]
+        ],
+        "examples": [
+          ["Das Auto ist schneller als das Fahrrad.", "Машина быстрее велосипеда."],
+          ["Der Mount Everest ist der höchste Berg der Welt.", "Эверест - самая высокая гора в мире."]
+        ]
       },
-      "task": "Напишите 4 предложения mit Komparativ und Superlativ."
+      "task": "Напишите 4 предложения, сравнивая два предмета или человека."
     },
     {
-      "title": "A2 Урок 10: Пассивный залог",
-      "words": [["werden","становиться"],["Partizip II","причастие II"],["von","кем"],["wird gemacht","делается"],["wurde gemacht","было сделано"]],
-      "phrases": [["Der Brief wird geschrieben.","Письмо пишется."],["Der Kuchen wird von ihr gebacken.","Торт печётся ею."],["Das Haus wurde 1990 gebaut.","Дом был построен в 1990."]],
-      "review": [["Passiv","пассив"],["Aktiv","актив"]],
+      "title": "A2 Урок 10: Пассивный залог (Passiv)",
+      "words": [
+        ["werden", "становиться (вЭрдэн)"],
+        ["gebaut", "построен (гэбАут)"],
+        ["geöffnet", "открыт (геЭфнэт)"],
+        ["geschrieben", "написан (гэшрИ:бэн)"],
+        ["von", "(кем/чем) (фон)"],
+        ["durch", "(посредством чего-то) (дурьхь)"]
+      ],
+      "phrases": [
+        ["Der Brief wird geschrieben.", "Письмо пишется (сейчас)."],
+        ["Das Haus wurde 1990 gebaut.", "Дом был построен в 1990."],
+        ["Der Kuchen wird von meiner Mutter gebacken.", "Торт печётся моей мамой."]
+      ],
+      "review": [
+        ["Passiv", "пассив (пАси:ф)"],
+        ["Aktiv", "актив (актИ:ф)"]
+      ],
       "gram": {
-        "rule": "Passiv: werden + Partizip II; Präteritum Passiv: wurde + Partizip II.",
-        "table": [["Präsens: wird gemacht","Präteritum: wurde gemacht"],["Perfekt: ist gemacht worden","Plusq.: war gemacht worden"]],
-        "examples": [["Die Tür wird geschlossen.","Дверь закрывается."],["Der Brief ist geschrieben worden.","Письмо было написано."]]
+        "rule": "Пассив показывает, что действие совершается над объектом. Образуется с помощью вспомогательного глагола 'werden' + Partizip II.",
+        "table": [
+          ["Präsens Passiv: wird + Partizip II"],
+          ["Präteritum Passiv: wurde + Partizip II"]
+        ],
+        "examples": [
+          ["Die Tür wird geschlossen.", "Дверь закрывается."],
+          ["Die E-Mail wurde gestern gesendet.", "Имейл был отправлен вчера."]
+        ]
       },
-      "task": "Преобразуйте 3 Aktivsätze ins Passiv."
+      "task": "Преобразуйте 3 активных предложения в пассивные."
     },
     {
-      "title": "A2 Урок 11: Indirekte Rede",
-      "words": [["sagen","говорить"],["erzählen","рассказывать"],["dass","что"],["Konjunktiv I","конъюнктив I"]],
-      "phrases": [["Er sagt, er sei müde.","Он говорит, что устал."],["Sie erzählt, sie habe Hunger.","Она говорит, что она голодна."],["Konj. I wird so gebildet.","Конъюнктив I образуется так."]],
-      "review": [["dass","что"],["Konjunktiv","конъюнктив"]],
+      "title": "A2 Урок 11: Косвенная речь (Konjunktiv II)",
+      "words": [
+        ["sagen", "говорить (зА:гэн)"],
+        ["fragen", "спрашивать (фрА:гэн)"],
+        ["meinen", "полагать, иметь в виду (мАйнэн)"],
+        ["wäre", "был бы (вЭ:рэ)"],
+        ["hätte", "имел бы (хЭтэ)"],
+        ["würde", "бы (вспом. глагол) (вЮрдэ)"]
+      ],
+      "phrases": [
+        ["Er sagt, er wäre müde.", "Он говорит, что он (якобы) устал."],
+        ["Sie fragte, ob ich Zeit hätte.", "Она спросила, было ли бы у меня время."]
+      ],
+      "review": [
+        ["dass", "что (дас)"],
+        ["Konjunktiv", "конъюнктив (кОнь-юнкти:ф)"]
+      ],
       "gram": {
-        "rule": "Indirekte Rede mit Konjunktiv I: Stamm + e, est, e, en, et, en.",
-        "table": [["ich sei","du seiest","er sei"],["wir seien","ihr seiet","sie seien"]],
-        "examples": [["Er sagt, er habe keine Zeit.","Он говорит, что у него нет времени."],["Sie meint, es sei besser.","Она считает, что это лучше."]]
+        "rule": "Konjunktiv II используется для передачи косвенной речи, выражения нереальных желаний или вежливых просьб. Часто образуется с помощью 'würde' + Infinitiv.",
+        "table": [
+          ["ich wäre, du wärest, er wäre"],
+          ["ich hätte, du hättest, er hätte"],
+          ["ich würde gehen, du würdest gehen..."]
+        ],
+        "examples": [
+          ["Er sagte, er hätte keine Zeit.", "Он сказал, что у него (якобы) нет времени."],
+          ["Wenn ich Geld hätte, würde ich ein Auto kaufen.", "Если бы у меня были деньги, я бы купил машину."]
+        ]
       },
-      "task": "Преобразуйте 5 direkte Zitate in indirekte Rede."
+      "task": "Преобразуйте 3 прямых высказывания в косвенную речь."
     },
     {
-      "title": "A2 Урок 12: Сложные числительные и выражения времени",
-      "words": [["zwölf","двенадцать"],["dreizehn","тринадцать"],["zwanzig","двадцать"],["dreißig","тридцать"],["einundzwanzig","двадцать один"]],
-      "phrases": [["Es ist zwölf Uhr.","Сейчас двенадцать часов."],["Ich bin 21 Jahre alt.","Мне 21 год."],["Am 3. Dezember.","3 декабря."]],
-      "review": [["eins","один"],["zwei","два"]],
+      "title": "A2 Урок 12: Порядковые числительные и даты",
+      "words": [
+        ["der erste", "первый (дэа Эастэ)"],
+        ["der zweite", "второй (дэа цвАйтэ)"],
+        ["der dritte", "третий (дэа дрИтэ)"],
+        ["der zwanzigste", "двадцатый (дэа цвАнцыхьстэ)"],
+        ["der Geburtstag", "день рождения (дэа гэбУртстак)"],
+        ["die Hochzeit", "свадьба (ди хОхцайт)"]
+      ],
+      "phrases": [
+        ["Heute ist der erste Juli.", "Сегодня первое июля."],
+        ["Mein Geburtstag ist am dritten Mai.", "Мой день рождения третьего мая."]
+      ],
+      "review": [
+        ["eins", "один (айнс)"],
+        ["zwei", "два (цвай)"]
+      ],
       "gram": {
-        "rule": "Числительные 21–99 пишутся слитно.",
-        "table": [["einundzwanzig","zweiundzwanzig"],["dreißig","vierzig"]],
-        "examples": [["Heute sind es dreißig Grad.","Сегодня 30 градусов."],["Sie ist dreiundzwanzig Jahre alt.","Ей 23 года."]]
+        "rule": "Порядковые числительные до 19 образуются добавлением -te, после 19 - добавлением -ste. При указании даты используется предлог 'am' и окончание -ten.",
+        "table": [
+          ["der zweite (2.)", "der zwanzigste (20.)"],
+          ["am zweiten (2.)", "am zwanzigsten (20.)"]
+        ],
+        "examples": [
+          ["Ich bin am fünften April geboren.", "Я родился пятого апреля."],
+          ["Die Prüfung ist am achtzehnten.", "Экзамен восемнадцатого числа."]
+        ]
       },
-      "task": "Напишите 5 дат и времен (например, 15. April, 14 Uhr)."
+      "task": "Напишите 5 важных для вас дат, используя порядковые числительные."
     },
     {
-      "title": "A2 Урок 13: Предлоги со смешанным управлением",
-      "words": [["an","на"],["auf","на"],["hinter","за"],["in","в"],["neben","рядом"]],
-      "phrases": [["Ich hänge das Bild an die Wand.","Я вешаю картину на стену."],["Das Bild hängt an der Wand.","Картина висит на стене."],["Wir fahren in die Stadt./Wir sind in der Stadt.","Мы едем в город./Мы в городе."]],
-      "review": [["Akkusativ","винительный"],["Dativ","дательный"]],
+      "title": "A2 Урок 13: Предлоги с двойным управлением",
+      "words": [
+        ["an", "на (верт.), у, к (ан)"],
+        ["auf", "на (гориз.) (ауф)"],
+        ["hinter", "за, позади (хИнта)"],
+        ["in", "в (ин)"],
+        ["neben", "рядом с (нЕ:бэн)"],
+        ["über", "над (Ю:ба)"],
+        ["unter", "под (Унта)"],
+        ["vor", "перед (фо:а)"],
+        ["zwischen", "между (цвИшэн)"]
+      ],
+      "phrases": [
+        ["Ich hänge das Bild an die Wand.", "Я вешаю картину на стену (куда? Akkusativ)."],
+        ["Das Bild hängt an der Wand.", "Картина висит на стене (где? Dativ)."]
+      ],
+      "review": [
+        ["Akkusativ", "винительный"],
+        ["Dativ", "дательный"]
+      ],
       "gram": {
-        "rule": "Смешанные Präpositionen: Akk. für движение, Dat. для положения.",
-        "table": [["in + Akk.","in + Dat."],["auf + Akk.","auf + Dat."]],
-        "examples": [["Er legt das Buch auf den Tisch.","Он кладёт книгу на стол."],["Es liegt auf dem Tisch.","Оно лежит на столе."]]
+        "rule": "Эти предлоги используются с Akkusativ при ответе на вопрос 'Wohin?' (куда?) и с Dativ при ответе на вопрос 'Wo?' (где?).",
+        "table": [
+          ["Wohin? -> Akkusativ (движение)"],
+          ["Wo? -> Dativ (положение)"]
+        ],
+        "examples": [
+          ["Er legt das Buch auf den Tisch (Akk).", "Он кладёт книгу на стол."],
+          ["Das Buch liegt auf dem Tisch (Dat).", "Книга лежит на столе."]
+        ]
       },
-      "task": "Используйте 4 смешанных предлога в предложениях (Akk. и Dat.)."
+      "task": "Составьте по два предложения с предлогами 'in' и 'auf', используя их с Akkusativ и Dativ."
     },
     {
-      "title": "A2 Урок 14: Конструкции lassen + Infinitiv",
-      "words": [["lassen","позволять/заставлять"],["helfen","помогать"],["schneiden","стричь"],["fahren","ездить"]],
-      "phrases": [["Lass mich in Ruhe.","Оставь меня в покое."],["Ich lasse mir die Haare schneiden.","Я стригусь."],["Er lässt das Auto reparieren.","Он сдаёт машину в ремонт."]],
-      "review": [["Infinitiv","инфинитив"],["Modalverben","модальные глаголы"]],
+      "title": "A2 Урок 14: Глагол 'lassen'",
+      "words": [
+        ["lassen", "позволять, заставлять, оставлять (лАсэн)"],
+        ["reparieren", "чинить (рэпарИ:рэн)"],
+        ["schneiden", "резать, стричь (шнАйдэн)"],
+        ["helfen", "помогать (хЭльфэн)"],
+        ["allein", "один, в одиночестве (алЯйн)"]
+      ],
+      "phrases": [
+        ["Lass mich in Ruhe!", "Оставь меня в покое!"],
+        ["Ich lasse mein Auto reparieren.", "Я отдаю машину в ремонт (позволяю ее чинить)."],
+        ["Sie lässt die Kinder spielen.", "Она позволяет детям играть."]
+      ],
+      "review": [
+        ["Infinitiv", "инфинитив"],
+        ["Modalverben", "модальные глаголы"]
+      ],
       "gram": {
-        "rule": "Lassen + Objekt + Infinitiv: заставлять или позволять.",
-        "table": [["ich lasse schneiden","du lässt schneiden"],["wir lassen fahren","ihr lasst fahren"]],
-        "examples": [["Sie lässt ihr Auto waschen.","Она моет свою машину."],["Lass mich mal sehen.","Дай мне посмотреть."]]
+        "rule": "Глагол 'lassen' используется как модальный: он стоит на втором месте, а смысловой глагол уходит в конец в инфинитиве. Имеет несколько значений.",
+        "table": [
+          ["Позволять: Er lässt mich gehen."],
+          ["Поручать: Ich lasse die Haare schneiden."]
+        ],
+        "examples": [
+          ["Sie lässt ihr Auto waschen.", "Она отдает свою машину на мойку."],
+          ["Lass uns ins Kino gehen!", "Давай пойдём в кино!"]
+        ]
       },
-      "task": "Напишите 4 предложения mit lassen + Infinitiv."
+      "task": "Напишите 4 предложения, используя 'lassen' в разных значениях."
     },
     {
       "title": "A2 Урок 15: Составные существительные",
-      "words": [["der Briefkasten","почтовый ящик"],["die Zahnbürste","зубная щётка"],["der Wasserkocher","чайник"],["das Schlafzimmer","спальня"]],
-      "phrases": [["Der Briefkasten steht draußen.","Почтовый ящик стоит снаружи."],["Meine Zahnbürste ist blau.","Моя зубная щётка синяя."],["Im Schlafzimmer ist ein großes Bett.","В спальне стоит большая кровать."]],
-      "review": [["der Mast","мачта"],["der Haken","крючок"]],
+      "words": [
+        ["das Wort", "слово (дас ворт)"],
+        ["das Buch", "книга (дас бу:х)"],
+        ["der Schrank", "шкаф (дэа шранк)"],
+        ["das Schlafzimmer", "спальня (шлА:ф-цимер)"],
+        ["der Kühlschrank", "холодильник (кЮ:ль-шранк)"],
+        ["das Wörterbuch", "словарь (вЁрта-бу:х)"],
+        ["die Haustür", "входная дверь (хАус-тю:а)"]
+      ],
+      "phrases": [
+        ["Der Briefkasten steht draußen.", "Почтовый ящик стоит снаружи."],
+        ["Meine Zahnbürste ist blau.", "Моя зубная щётка синяя."],
+        ["Im Schlafzimmer ist ein großes Bett.", "В спальне стоит большая кровать."]
+      ],
+      "review": [
+        ["der", "(дэа)"],
+        ["die", " (ди)"],
+        ["das", "(дас)"]
+      ],
       "gram": {
-        "rule": "В немецком Komposita (составные слова) пишутся без пробела.",
-        "table": [["Wasser + Kocher","Brief + Kasten"],["Schlaf + Zimmer","Zahn + Bürste"]],
-        "examples": [["Der Wasserkocher kocht Wasser.","Чайник кипятит воду."],["Ich öffne den Briefkasten.","Я открываю почтовый ящик."]]
+        "rule": "В немецком языке можно создавать новые слова, соединяя несколько существительных. Род такого слова определяется по последнему слову.",
+        "table": [
+          ["die Hand + die Tasche = die Handtasche"],
+          ["das Auto + die Bahn = die Autobahn"]
+        ],
+        "examples": [
+          ["Der Wasserkocher kocht Wasser.", "Чайник кипятит воду."],
+          ["Ich öffne das Wörterbuch.", "Я открываю словарь."]
+        ]
       },
-      "task": "Создайте 5 Komposita из предложенных слов."
+      "task": "Создайте 3 своих составных слова и объясните их значение."
     },
     {
       "title": "A2 Урок 16: Partizip I и II как прилагательные",
-      "words": [["laufend","бегущий"],["brennend","горящий"],["geschrieben","написанный"],["gelernt","выученный"]],
-      "phrases": [["die laufenden Kinder","бегущие дети"],["das geschriebene Wort","написанное слово"],["ein brennendes Gebäude","горящее здание"]],
-      "review": [["Partizip I","причастие I"],["Partizip II","причастие II"]],
+      "words": [
+        ["laufend", "бегущий (лАуфэнт)"],
+        ["lachend", "смеющийся (лАхэнт)"],
+        ["geschrieben", "написанный (гэшрИ:бэн)"],
+        ["gekocht", "сваренный (гэкОхт)"],
+        ["interessant", "интересный (интэрэсАнт)"],
+        ["geliebt", "любимый (гэлИ:пт)"]
+      ],
+      "phrases": [
+        ["die spielenden Kinder", "играющие дети"],
+        ["das geschriebene Wort", "написанное слово"],
+        ["ein brennendes Gebäude", "горящее здание"]
+      ],
+      "review": [
+        ["Partizip I", "причастие I"],
+        ["Partizip II", "причастие II"]
+      ],
       "gram": {
-        "rule": "Partizip I (Inf.+d) и II (ge-…-t) могут служить прилагательными.",
-        "table": [["laufend","brennend"],["geschrieben","gemacht"]],
-        "examples": [["der schlafende Hund","спящий пес"],["das reparierte Auto","отремонтированный автомобиль"]]
+        "rule": "Причастия I (Infinitiv + d) и II (форма для Perfekt) могут использоваться как прилагательные и склоняются по тем же правилам.",
+        "table": [
+          ["Partizip I (активное): das weinende Kind (плачущий ребенок)"],
+          ["Partizip II (пассивное): das geöffnete Fenster (открытое окно)"]
+        ],
+        "examples": [
+          ["Der schlafende Hund ist süß.", "Спящая собака милая."],
+          ["Ich esse gekochte Eier.", "Я ем вареные яйца."]
+        ]
       },
-      "task": "Опишите 5 объектов с причастиями I или II."
+      "task": "Опишите 5 объектов, используя причастия в качестве прилагательных."
     },
     {
-      "title": "A2 Урок 17: Инфинитивные конструкции (sehen, hören, lassen)",
-      "words": [["sehen","видеть"],["hören","слышать"],["lassen","позволять"],["kommen","приходить"]],
-      "phrases": [["Ich sehe ihn kommen.","Я вижу, как он идёт."],["Wir hören das Wasser fließen.","Мы слышим, как течёт вода."],["Sie lässt mich wählen.","Она позволяет мне выбирать."]],
-      "review": [["Infinitiv","инфинитив"],["Objekt","объект"]],
+      "title": "A2 Урок 17: Инфинитивные конструкции (ohne ... zu, anstatt ... zu)",
+      "words": [
+        ["ohne ... zu", "не... (делая что-то) (О:нэ ... цу)"],
+        ["(an)statt ... zu", "вместо того, чтобы (ан-штАт ... цу)"],
+        ["um ... zu", "для того, чтобы (ум ... цу)"],
+        ["versuchen", "пытаться (фэазУ:хэн)"],
+        ["vergessen", "забывать (фэагЭсэн)"]
+      ],
+      "phrases": [
+        ["Er geht, ohne ein Wort zu sagen.", "Он уходит, не говоря ни слова."],
+        ["Anstatt zu arbeiten, sieht er fern.", "Вместо того, чтобы работать, он смотрит телевизор."],
+        ["Ich lerne Deutsch, um in Deutschland zu studieren.", "Я учу немецкий, чтобы учиться в Германии."]
+      ],
+      "review": [
+        ["Infinitiv", "инфинитив"],
+        ["Nebensatz", "придаточное предложение"]
+      ],
       "gram": {
-        "rule": "Verben wie sehen, hören, lassen stehen mit Infinitiv ohne 'zu'.",
-        "table": [["ich sehe kommen","du siehst kommen"],["ich höre spielen","er hört spielen"]],
-        "examples": [["Ich sehe das Kind weinen.","Я вижу как ребёнок плачет."],["Lass mich tanzen.","Дай мне танцевать."]]
+        "rule": "Эти конструкции позволяют строить сложные предложения. 'zu' ставится перед инфинитивом. Если глагол с отделяемой приставкой, 'zu' ставится между приставкой и корнем.",
+        "table": [
+          ["..., um die Prüfung zu bestehen."],
+          ["..., ohne dich anzurufen (an-zu-rufen)."]
+        ],
+        "examples": [
+          ["Sie versucht, das Fenster zu öffnen.", "Она пытается открыть окно."],
+          ["Ich habe vergessen, dich anzurufen.", "Я забыл тебе позвонить."]
+        ]
       },
-      "task": "Составьте 5 предложений mit Infinitivkonstruktionen."
+      "task": "Составьте 3 предложения, используя конструкции um...zu, ohne...zu, anstatt...zu."
     },
     {
-      "title": "A2 Урок 18: Союзы und, oder, aber, sondern",
-      "words": [["und","и"],["oder","или"],["aber","но"],["sondern","а"]],
-      "phrases": [["Ich trinke Kaffee und Tee.","Я пью кофе и чай."],["Er ist müde, aber er arbeitet weiter.","Он устал, но работает дальше."],["Nicht du, sondern ich.","Не ты, а я."]],
-      "review": [["weil","потому что"],["wenn","если"]],
+      "title": "A2 Урок 18: Союзы (denn, deshalb, trotzdem)",
+      "words": [
+        ["und", "и (унт)"],
+        ["oder", "или (О:да)"],
+        ["aber", "но (А:ба)"],
+        ["denn", "так как, потому что (дэн)"],
+        ["deshalb", "поэтому (дэсхАльп)"],
+        ["trotzdem", "несмотря на это (троцдЕ:м)"]
+      ],
+      "phrases": [
+        ["Ich trinke Kaffee und Tee.", "Я пью кофе и чай."],
+        ["Er ist müde, aber er arbeitet weiter.", "Он устал, но работает дальше."],
+        ["Ich kann nicht kommen, denn ich bin krank.", "Я не могу прийти, так как я болен."]
+      ],
+      "review": [
+        ["weil", "потому что (вайль)"],
+        ["wenn", "если (вэн)"]
+      ],
       "gram": {
-        "rule": "Союзы koordinierend: не изменяют порядок слов.",
-        "table": [["S + und + S","S + aber + S"],["S + oder + S","S + sondern + S"]],
-        "examples": [["Sie mag Äpfel und Birnen.","Она любит яблоки и груши."],["Ich gehe nicht nach Hause, sondern ins Kino.","Я иду не домой, а в кино."]]
+        "rule": "Союзы 'und, oder, aber, denn' не влияют на порядок слов. Союзы 'deshalb, trotzdem' требуют обратного порядка слов (глагол + подлежащее).",
+        "table": [
+          ["..., aber er kommt nicht."],
+          ["Er ist krank, deshalb kommt er nicht."]
+        ],
+        "examples": [
+          ["Sie mag Äpfel und Birnen.", "Она любит яблоки и груши."],
+          ["Es regnet, trotzdem gehe ich spazieren.", "Идет дождь, несмотря на это я иду гулять."]
+        ]
       },
-      "task": "Составьте 4 предложения с разными союзами."
+      "task": "Составьте 4 предложения, используя союзы denn, aber, deshalb, trotzdem."
     },
     {
       "title": "A2 Урок 19: Устойчивые выражения и идиомы",
-      "words": [["ins Gras beißen","умереть"],["die Daumen drücken","держать кулаки"],["Tomaten auf den Augen haben","ничего не замечать"],["den Nagel auf den Kopf treffen","попасть в точку"]],
-      "phrases": [["Ich drücke dir die Daumen.","Я держу за тебя кулаки."],["Er hat Tomaten auf den Augen.","Он ничего не замечает."],["Sie hat den Nagel auf den Kopf getroffen.","Она попала в точку."]],
-      "review": [["sehen","видеть"],["helfen","помогать"]],
+      "words": [
+        ["die Daumen drücken", "держать кулачки (ди дАумэн дрЮкен)"],
+        ["Tomaten auf den Augen haben", "ничего не замечать (томА:тэн ауф дэн Аугэн хА:бэн)"],
+        ["Schwein haben", "повезти (швайн хА:бэн)"],
+        ["Bahnhof verstehen", "ничего не понимать (бА:нхо:ф фэаштЕ:эн)"],
+        ["auf den Keks gehen", "действовать на нервы (ауф дэн ке:кс гЕ:эн)"]
+      ],
+      "phrases": [
+        ["Ich drücke dir die Daumen für die Prüfung.", "Я держу за тебя кулачки на экзамене."],
+        ["Ich verstehe nur Bahnhof.", "Я ничего не понимаю."],
+        ["Diese laute Musik geht mir auf den Keks.", "Эта громкая музыка действует мне на нервы."]
+      ],
+      "review": [
+        ["sehen", "видеть (зЕ:эн)"],
+        ["helfen", "помогать (хЭльфэн)"]
+      ],
       "gram": {
-        "rule": "Идиомы – устойчивые сочетания слов с переносным значением.",
-        "table": [["ins Gras beißen","die Flügel strecken"],["daumen drücken","Tomaten haben"]],
-        "examples": [["Er hat Tomaten auf den Augen.","Он ничего не видит."],["Wir drücken dir die Daumen.","Мы держим за тебя кулаки."]]
+        "rule": "Идиомы – это устойчивые сочетания слов с переносным значением. Их нужно запоминать целиком.",
+        "table": [
+          ["Schwein haben (досл. иметь свинью) = повезти"],
+          ["Bahnhof verstehen (досл. понимать вокзал) = ничего не понимать"]
+        ],
+        "examples": [
+          ["Er hat die Prüfung bestanden. Da hat er Schwein gehabt!", "Он сдал экзамен. Вот ему повезло!"],
+          ["Was redest du da? Ich verstehe nur Bahnhof.", "О чем ты говоришь? Я ничего не понимаю."]
+        ]
       },
-      "task": "Напишите 3 собственные идиомы и объясните их."
+      "task": "Выберите 2 идиомы и составьте с ними свои предложения."
     },
     {
-      "title": "A2 Урок 20: Es gibt + Akkusativ",
-      "words": [["es gibt","есть"],["einen Supermarkt","супермаркет"],["viele Möglichkeiten","многие возможности"],["ein Problem","проблема"]],
-      "phrases": [["Es gibt hier einen Supermarkt.","Здесь есть супермаркет."],["Es gibt viele Möglichkeiten.","Есть много возможностей."],["Gibt es ein Problem?","Есть проблема?"]],
-      "review": [["Akkusativ","винительный"],["Dativ","дательный"]],
+      "title": "A2 Урок 20: Конструкция 'es gibt'",
+      "words": [
+        ["es gibt", "есть, имеется (эс гипт)"],
+        ["der Stau", "пробка (на дороге) (дэа штау)"],
+        ["die Möglichkeit", "возможность (ди мЁ:глихькайт)"],
+        ["das Problem", "проблема (дас проблЕ:м)"],
+        ["viele", "много (фИ:ле)"],
+        ["keine", "никаких (кАйнэ)"]
+      ],
+      "phrases": [
+        ["Es gibt hier einen Supermarkt.", "Здесь есть супермаркет."],
+        ["Es gibt viele Möglichkeiten.", "Есть много возможностей."],
+        ["Gibt es ein Problem?", "Есть проблема?"]
+      ],
+      "review": [
+        ["Akkusativ", "винительный падеж"],
+        ["Dativ", "дательный падеж"]
+      ],
       "gram": {
-        "rule": "Es gibt + Akk.: указывает на наличие.",
-        "table": [["es gibt einen Park","es gibt viele Bücher"],["gibt es ...?","es gibt keine ..."]],
-        "examples": [["Es gibt heute viel Schnee.","Сегодня много снега."],["Gibt es hier WLAN?","Здесь есть Wi-Fi?"]]
+        "rule": "Конструкция 'es gibt' (есть, имеется) всегда требует после себя винительного падежа (Akkusativ).",
+        "table": [
+          ["Es gibt einen Park (Akk)."],
+          ["Es gibt viele Bücher (Akk)."]
+        ],
+        "examples": [
+          ["In dieser Stadt gibt es keine U-Bahn.", "В этом городе нет метро."],
+          ["Gibt es hier WLAN?", "Здесь есть Wi-Fi?"]
+        ]
       },
-      "task": "Составьте 5 предложений mit 'es gibt'."
+      "task": "Составьте 5 предложений, описывая, что есть или чего нет в вашем городе, используя 'es gibt'."
     },
     {
-      "title": "A2 Урок 21: Императив (du, ihr, Sie)",
-      "words": [["komm!","приходи!"],["macht!","делайте!"],["seien Sie!","будьте!"],["lasst!","давайте!"]],
-      "phrases": [["Komm her!","Иди сюда!"],["Helft mir!","Помогите мне!"],["Seien Sie pünktlich!","Будьте пунктуальны!"]],
-      "review": [["Infinitiv","инфинитив"],["Du-Form","форма ты"]],
+      "title": "A2 Урок 21: Императив (повелительное наклонение)",
+      "words": [
+        ["komm!", "приходи! (ком)"],
+        ["macht!", "делайте! (махт)"],
+        ["seien Sie!", "будьте! (зАйен зи)"],
+        ["lies!", "читай! (ли:с)"],
+        ["hilf mir!", "помоги мне! (хильф миа)"]
+      ],
+      "phrases": [
+        ["Komm her!", "Иди сюда!"],
+        ["Helft mir, bitte!", "Помогите мне, пожалуйста!"],
+        ["Seien Sie pünktlich!", "Будьте пунктуальны!"]
+      ],
+      "review": [
+        ["Infinitiv", "инфинитив"],
+        ["Du-Form", "форма 'ты'"]
+      ],
       "gram": {
-        "rule": "Imperativ du: глагольный Stamm без -st; ihr: ihr-Form без pronomina; Sie: Infinitiv + Sie.",
-        "table": [["du: geh!","ihr: geht!"],["Sie: kommen Sie!","wir: gehen wir!"]],
-        "examples": [["Iss dein Gemüse!","Ешь овощи!"],["Macht die Tür zu!","Закройте дверь!"]]
+        "rule": "Формы императива: du-форма (основа глагола, часто с -e), ihr-форма (как в Präsens, но без 'ihr'), Sie-форма (Infinitiv + Sie).",
+        "table": [
+          ["du: Geh! / Nimm! (сильный глагол)"],
+          ["ihr: Geht! / Nehmt!"],
+          ["Sie: Gehen Sie! / Nehmen Sie!"]
+        ],
+        "examples": [
+          ["Iss dein Gemüse!", "Ешь свои овощи!"],
+          ["Macht die Tür zu!", "Закройте дверь!"]
+        ]
       },
-      "task": "Напишите 4 повелительных предложения."
+      "task": "Напишите 4 повелительных предложения: по одному для форм du, ihr, Sie и одно с сильным глаголом."
     },
     {
-      "title": "A2 Урок 22: Частицы (ja, doch, mal, schon)",
-      "words": [["ja","же"],["doch","ведь"],["mal","ка"],["schon","уже"]],
-      "phrases": [["Komm mal her!","Иди-ка сюда!"],["Das ist ja toll!","Это же здорово!"],["Es ist doch spät.","Ведь уже поздно."]],
-      "review": [["Partikel","частица"],["Modalpartikel","модальная частица"]],
+      "title": "A2 Урок 22: Модальные частицы (ja, doch, mal)",
+      "words": [
+        ["ja", "(усилительная) же (я)"],
+        ["doch", "ведь, же (дох)"],
+        ["mal", "-ка (маль)"],
+        ["eben", "именно, как раз (Э:бэн)"],
+        ["ruhig", "спокойно, смело (рУ:ихь)"]
+      ],
+      "phrases": [
+        ["Komm mal her!", "Иди-ка сюда!"],
+        ["Das ist ja toll!", "Это же здорово!"],
+        ["Das ist doch Quatsch!", "Это же ерунда!"]
+      ],
+      "review": [
+        ["Partikel", "частица (партИкель)"]
+      ],
       "gram": {
-        "rule": "Modalpartikeln stehen meist zwischen Verb und Subjekt или в конце предложения.",
-        "table": [["ja","doch"],["mal","schon"]],
-        "examples": [["Du bist ja verrückt!","Ты же сумасшедший!"],["Mach mal langsam!","Не спеши."]]
+        "rule": "Модальные частицы придают речи эмоциональную окраску и не переводятся дословно. Обычно стоят в середине предложения после глагола.",
+        "table": [
+          ["Удивление: Das ist ja super!"],
+          ["Смягчение: Hilf mir mal kurz."]
+        ],
+        "examples": [
+          ["Du bist ja verrückt!", "Да ты же сумасшедший!"],
+          ["Du kannst ruhig gehen, ich warte.", "Можешь смело идти, я подожду."]
+        ]
       },
-      "task": "Используйте 4 частицы в разных предложениях."
+      "task": "Используйте частицы ja, doch, mal в трех разных предложениях."
     },
     {
-      "title": "A2 Урок 23: Придаточные предложения времени (als, bevor, nachdem)",
-      "words": [["als","когда (в прошлом)"],["bevor","прежде чем"],["nachdem","после того как"],["seitdem","с тех пор как"]],
-      "phrases": [["Als ich klein war, spielte ich viel.","Когда я был маленьким, я много играл."],["Bevor wir essen, waschen wir uns.","Прежде чем есть, мы моемся."],["Nachdem er gekommen war, setzten wir uns.","После того как он пришёл, мы сели."]],
-      "review": [["weil","потому что"],["wenn","если"]],
+      "title": "A2 Урок 23: Придаточные времени (als, wenn, bevor, nachdem)",
+      "words": [
+        ["als", "когда (однократно в прошлом) (альс)"],
+        ["wenn", "когда (многократно), если (вэн)"],
+        ["bevor", "прежде чем (бэфО:а)"],
+        ["nachdem", "после того как (нахдЕ:м)"],
+        ["seitdem", "с тех пор как (зайтдЕ:м)"]
+      ],
+      "phrases": [
+        ["Als ich klein war, spielte ich viel.", "Когда я был маленьким, я много играл."],
+        ["Bevor wir essen, waschen wir die Hände.", "Прежде чем есть, мы моем руки."]
+      ],
+      "review": [
+        ["weil", "потому что (вайль)"],
+        ["obwohl", "хотя (обвО:ль)"]
+      ],
       "gram": {
-        "rule": "In Nebensätzen mit 'als', 'bevor', 'nachdem' steht das Verb am Ende; 'nachdem' требует Perfekt.",
-        "table": [["als + Präteritum","nachdem + Perfekt"],["bevor + Präsens","seitdem + Perfekt"]],
-        "examples": [["Seitdem er gegangen ist, bin ich allein.","С тех пор как он ушёл, я один."],["Nachdem ich gegessen hatte, ging ich spazieren.","После того как я поел, я пошёл гулять."]]
+        "rule": "Союз 'als' используется для однократного действия в прошлом. 'Wenn' - для повторяющихся действий в прошлом, настоящем и будущем. Глагол в придаточном уходит в конец.",
+        "table": [
+          ["als + Präteritum (о прошлом)"],
+          ["nachdem + Plusquamperfekt (предпрошедшее время)"]
+        ],
+        "examples": [
+          ["Nachdem ich gegessen hatte, ging ich spazieren.", "После того как я поел, я пошёл гулять."],
+          ["Seitdem er hier wohnt, ist er glücklich.", "С тех пор как он здесь живет, он счастлив."]
+        ]
       },
-      "task": "Составьте 3 предложения mit als, bevor и nachdem."
+      "task": "Составьте 3 предложения, используя als, wenn и nachdem."
     },
     {
-      "title": "A2 Урок 24: Konjunktiv I в расширенной форме",
-      "words": [["sei","будь"],["habe","имей"],["werde","стань"],["möglicherweise","возможно"]],
-      "phrases": [["Es lebe der König!","Да здравствует король!"],["Möge er gesegnet sein.","Да благословен он."],["Er sage, er sei bereit.","Он говорит, что готов."]],
-      "review": [["Konjunktiv I","форма"],["Infinitiv","инфинитив"]],
+      "title": "A2 Урок 24: Konjunktiv II (нереальные условия)",
+      "words": [
+        ["wäre", "был бы (вЭ:рэ)"],
+        ["hätte", "имел бы (хЭтэ)"],
+        ["würde kommen", "пришёл бы (вЮрдэ кОмэн)"],
+        ["könnte", "мог бы (кЁнтэ)"],
+        ["sollte", "следовало бы (зОльтэ)"],
+        ["der Wunsch", "желание (дэа вунш)"]
+      ],
+      "phrases": [
+        ["Wenn ich reich wäre, würde ich reisen.", "Если бы я был богат, я бы путешествовал."],
+        ["An deiner Stelle würde ich das nicht machen.", "На твоём месте я бы этого не делал."],
+        ["Könntest du mir helfen?", "Не мог бы ты мне помочь? (вежливая просьба)"]
+      ],
+      "review": [
+        ["Konjunktiv II", "конъюнктив II"],
+        ["würde + Infinitiv", "конструкция для образования"]
+      ],
       "gram": {
-        "rule": "Konjunktiv I используется для формальной косвенной речи и некоторых пожеланий.",
-        "table": [["ich sei","du seiest","er sei"],["wir seien","ihr seiet","sie seien"]],
-        "examples": [["Er sage, er habe keine Zeit.","Он говорит, что у него нет времени."],["Der Arzt empfehle, er nehme das Medikament.","Врач рекомендует, чтобы он принял лекарство."]]
+        "rule": "Konjunktiv II используется для выражения нереальных условий, желаний и вежливых просьб. Для большинства глаголов образуется с помощью 'würde' + Infinitiv.",
+        "table": [
+          ["ich wäre, du wärest, er wäre"],
+          ["ich hätte, du hättest, er hätte"]
+        ],
+        "examples": [
+          ["Ich würde gern in Italien wohnen.", "Я бы хотел жить в Италии."],
+          ["Wenn ich du wäre, würde ich mehr lernen.", "Если бы я был тобой, я бы больше учил."]
+        ]
       },
-      "task": "Напишите 3 предложения im Konjunktiv I."
+      "task": "Напишите 4 нереальных условных предложения (о деньгах, времени, способностях и т.д.)."
     },
     {
-      "title": "A2 Урок 25: Konjunktiv II: нереальные условия и вежливые просьбы",
-      "words": [["wäre","был бы"],["hätte","имел бы"],["würde kommen","пришёл бы"],["könnte","мог бы"]],
-      "phrases": [["Wenn ich reich wäre, würde ich reisen.","Если бы я был богат, я бы путешествовал."],["Er hätte mehr Zeit.","У него было бы больше времени."],["Könntest du mir helfen?","Не мог бы ты мне помочь?"]],
-      "review": [["Konjunktiv II","форма"],["würde + Infinitiv","образование"]],
+      "title": "A2 Урок 25: Relativsätze (придаточные определительные)",
+      "words": [
+        ["der, die, das", "который, которая, которое"],
+        ["welcher, welche, welches", "который, которая, которое (усиленное)"],
+        ["der Mann, der...", "мужчина, который..."],
+        ["das Buch, das...", "книга, которая..."],
+        ["die Frau, die...", "женщина, которая..."]
+      ],
+      "phrases": [
+        ["Der Mann, der dort steht, ist mein Lehrer.", "Мужчина, который стоит там, мой учитель."],
+        ["Das Buch, das du liest, ist neu.", "Книга, которую ты читаешь, новая."],
+        ["Hier ist die Frau, die immer hilft.", "Вот женщина, которая всегда помогает."]
+      ],
+      "review": [
+        ["dass", "что (дас)"],
+        ["weil", "потому что (вайль)"]
+      ],
       "gram": {
-        "rule": "Konjunktiv II выражает нереальные условия и вежливые просьбы.",
-        "table": [["ich wäre","du wärest","er wäre"],["ich hätte","du hättest","er hätte"]],
-        "examples": [["Ich würde bleiben.","Я бы остался."],["Er könnte kommen.","Он мог бы прийти."]]
+        "rule": "Относительное местоимение (der, die, das и т.д.) согласуется в роде и числе с существительным, к которому относится, а падеж зависит от его роли в придаточном предложении. Глагол в Relativsatz стоит в конце.",
+        "table": [
+          ["Nominativ: der Mann, der lacht"],
+          ["Akkusativ: der Mann, den ich sehe"],
+          ["Dativ: der Mann, dem ich helfe"]
+        ],
+        "examples": [
+          ["Die Frau, der ich geholfen habe, ist dankbar.", "Женщина, которой я помог, благодарна."],
+          ["Das Auto, dessen Motor laut ist, wird repariert.", "Машина, мотор которой громкий, ремонтируется. (Genitiv)"]
+        ]
       },
-      "task": "Напишите 4 нереальных условных предложения."
+      "task": "Составьте 4 предложения с Relativsätze, используя разные падежи."
     },
     {
-      "title": "A2 Урок 26: Relativsätze (который/которая/которое)",
-      "words": [["der Mann, der","мужчина, который"],["das Buch, das","книга, которая"],["die Frau, die","женщина, которая"]],
-      "phrases": [["Der Mann, der dort steht, ist mein Lehrer.","Мужчина, который стоит там, мой учитель."],["Das Buch, das du liest, ist neu.","Книга, которую ты читаешь, новая."],["Hier ist die Frau, die hilft.","Вот женщина, которая помогает."]],
-      "review": [["dass","что"],["weil","потому что"]],
+      "title": "A2 Урок 26: Passiv vs Zustandspassiv",
+      "words": [
+        ["werden", "становиться (вЭрдэн)"],
+        ["sein", "быть (зайн)"],
+        ["geöffnet", "открыт (геЭфнэт)"],
+        ["geschlossen", "закрыт (гэшлОсэн)"],
+        ["repariert", "отремонтирован (рэпарИ:рт)"],
+        ["der Prozess", "процесс (дэа процЭс)"],
+        ["der Zustand", "состояние (дэа цУ:штант)"]
+      ],
+      "phrases": [
+        ["Die Tür wird geöffnet.", "Дверь открывается (процесс)."],
+        ["Die Tür ist geöffnet.", "Дверь открыта (состояние)."],
+        ["Das Auto wird repariert.", "Машина ремонтируется (процесс)."]
+      ],
+      "review": [
+        ["Vorgangspassiv", "пассив процесса"],
+        ["Zustandspassiv", "пассив состояния"]
+      ],
       "gram": {
-        "rule": "Relativpronomen согласуется с существительным (Genus, Numerus, Kasus).",
-        "table": [["der – den – dem"],["die – die – der"],["das – das – dem"]],
-        "examples": [["Die Frau, der ich geholfen habe, ist dankbar.","Женщина, которой я помог, благодарна."],["Das Auto, dessen Motor laut ist, wird repariert.","Машину, у которой громкий мотор, ремонтируют."]]
+        "rule": "Vorgangspassiv (werden + Partizip II) описывает сам процесс, действие. Zustandspassiv (sein + Partizip II) описывает результат этого действия, состояние.",
+        "table": [
+          ["Процесс: wird gemacht"],
+          ["Состояние: ist gemacht"]
+        ],
+        "examples": [
+          ["Das Essen wird gekocht.", "Еда готовится."],
+          ["Das Essen ist gekocht.", "Еда готова (сварена)."]
+        ]
       },
-      "task": "Составьте 4 Relativsätze."
+      "task": "Напишите по 2 предложения для описания процесса и результата для действий 'строить дом' и 'писать письмо'."
     },
     {
-      "title": "A2 Урок 27: Vorgangspassiv vs Zustandspassiv",
-      "words": [["werden","становиться"],["sein","быть"],["geöffnet","открыт"],["geöffnet worden","был открыт"]],
-      "phrases": [["Die Tür wird geöffnet.","Дверь открывается."],["Die Tür ist geöffnet.","Дверь открыта."],["Die Tür ist geöffnet worden.","Дверь была открыта."]],
-      "review": [["Vorgangspassiv","процесс"],["Zustandspassiv","состояние"]],
+      "title": "A2 Урок 27: Косвенные вопросы",
+      "words": [
+        ["ob", "ли (оп)"],
+        ["erklären", "объяснять (эаклЭ:рэн)"],
+        ["wissen", "знать (вИсэн)"],
+        ["sagen", "говорить (зА:гэн)"]
+      ],
+      "phrases": [
+        ["Ich weiß nicht, ob er kommt.", "Я не знаю, придёт ли он."],
+        ["Kannst du mir sagen, wann der Zug fährt?", "Не мог бы ты сказать, когда отправляется поезд?"],
+        ["Er fragt, wer da ist.", "Он спрашивает, кто там."]
+      ],
+      "review": [
+        ["Fragewörter", "вопросительные слова"],
+        ["Konjunktiv", "конъюнктив"]
+      ],
       "gram": {
-        "rule": "Vorgangspassiv: werden + Partizip II; Zustandspassiv: sein + Partizip II.",
-        "table": [["Vorgang: wird gemacht","Zustand: ist gemacht"],["Perfekt Vorgang: ist gemacht worden","Perfekt Zustand: ist gemacht"]],
-        "examples": [["Die Nachricht wird gelesen.","Новость читается."],["Die Nachricht ist gelesen.","Новость прочитана."]]
+        "rule": "Косвенный вопрос является придаточным предложением. Если в прямом вопросе было вопросительное слово, оно сохраняется. Если был Ja/Nein-вопрос, используется союз 'ob'. Глагол уходит в конец.",
+        "table": [
+          ["Прямой: Wann kommst du?", "Косвенный: ..., wann du kommst."],
+          ["Прямой: Kommst du?", "Косвенный: ..., ob du kommst."]
+        ],
+        "examples": [
+          ["Er fragt, warum ich lache.", "Он спрашивает, почему я смеюсь."],
+          ["Ich möchte wissen, ob das möglich ist.", "Я хотел бы знать, возможно ли это."]
+        ]
       },
-      "task": "Различите 4 Vorgangspassiv- и Zustandspassiv-Сätze."
+      "task": "Преобразуйте 3 прямых вопроса в косвенные."
     },
     {
-      "title": "A2 Урок 28: Косвенные вопросы (indirekte Fragen)",
-      "words": [["ob","ли"],["wann","когда"],["wer","кто"],["was","что"]],
-      "phrases": [["Ich weiß nicht, ob er kommt.","Я не знаю, придёт ли он."],["Kannst du mir sagen, wann der Zug fährt?","Не мог бы ты сказать, когда отправляется поезд?"],["Er fragt, wer da ist.","Он спрашивает, кто там."]],
-      "review": [["Fragewörter","вопросительные слова"],["Konjunktiv I","косвенная речь"]],
+      "title": "A2 Урок 28: Отделяемые и неотделяемые приставки",
+      "words": [
+        ["anrufen", "звонить (Анру:фэн)"],
+        ["einkaufen", "делать покупки (Айнкауфэн)"],
+        ["verstehen", "понимать (фэаштЕ:эн)"],
+        ["erzählen", "рассказывать (эацЭ:лен)"],
+        ["mitbringen", "приносить с собой (мИтбринген)"],
+        ["bekommen", "получать (бэкОмэн)"],
+        ["zerstören", "разрушать (цэаштЁ:рэн)"]
+      ],
+      "phrases": [
+        ["Ich stehe um 8 Uhr auf.", "Я встаю в 8 часов."],
+        ["Er versteht das nicht.", "Он этого не понимает."],
+        ["Kommst du heute Abend mit?", "Ты пойдёшь сегодня вечером с нами?"]
+      ],
+      "review": [
+        ["Präfix", "приставка (прЭ:фикс)"],
+        ["trennbar", "отделяемый (трЭнба:а)"]
+      ],
       "gram": {
-        "rule": "Indirekte Frage mit Fragewort oder 'ob' + Verb am Satzende.",
-        "table": [["ob + S + ... + V","wann + S + ... + V"],["wer + S + ... + V","was + S + ... + V"]],
-        "examples": [["Er fragt, ob wir kommen.","Он спрашивает, придём ли мы."],["Ich weiß, wer dort wohnt.","Я знаю, кто там живёт."]]
+        "rule": "Отделяемые приставки (an, auf, ein, mit...) в Präsens уходят в конец предложения. Неотделяемые (be, er, ver, zer...) всегда остаются с глаголом.",
+        "table": [
+          ["Отделяемая: anrufen -> Ich rufe dich an."],
+          ["Неотделяемая: bekommen -> Ich bekomme einen Brief."]
+        ],
+        "examples": [
+          ["Der Zug fährt um 10 Uhr ab.", "Поезд отправляется в 10 часов."],
+          ["Ich erzähle dir eine Geschichte.", "Я расскажу тебе историю."]
+        ]
       },
-      "task": "Напишите 3 косвенных вопроса."
+      "task": "Составьте по 2 предложения с глаголами с отделяемыми и неотделяемыми приставками."
     },
     {
-      "title": "A2 Урок 29: Отделяемые и неотделяемые приставки",
-      "words": [["aufstehen","вставать"],["verstehen","понимать"],["mitkommen","приходить"],["zerreißen","рвать"]],
-      "phrases": [["Ich stehe um 8 Uhr auf.","Я встаю в 8 часов."],["Er versteht das nicht.","Он этого не понимает."],["Nimmst du mich mit?","Возьмёшь меня с собой?"]],
-      "review": [["Präfix","приставка"],["trennbar vs untrennbar","отделяемые/нет"]],
+      "title": "A2 Урок 29: Genitiv (родительный падеж)",
+      "words": [
+        ["der Genitiv", "родительный падеж (гЕ:нитив)"],
+        ["das Auto meines Vaters", "машина моего отца"],
+        ["die Farbe des Hauses", "цвет дома"],
+        ["wessen?", "чей? (вЭсэн)"],
+        ["statt", "вместо (штат)"],
+        ["trotz", "несмотря на (троц)"],
+        ["während", "во время (вЭ:рэнт)"],
+        ["wegen", "из-за (вЕ:гэн)"]
+      ],
+      "phrases": [
+        ["Das ist das Haus meines Freundes.", "Это дом моего друга."],
+        ["Trotz des schlechten Wetters gehen wir spazieren.", "Несмотря на плохую погоду, мы идем гулять."]
+      ],
+      "review": [
+        ["mein Vater", "мой отец"],
+        ["das Haus", "дом"]
+      ],
       "gram": {
-        "rule": "Отделяемые приставки отделяются в Präsens; неотделяемые остаются с глаголом.",
-        "table": [["auf + stehen","ver + stehen"],["mit + kommen","zer + reißen"]],
-        "examples": [["Der Zug steht um 8 Uhr auf.","Поезд отправляется в 8 часов."],["Er zerreißt den Brief.","Он рвёт письмо."]]
+        "rule": "Genitiv отвечает на вопрос 'Wessen?' (чей?) и выражает принадлежность. Существительные мужского и среднего рода получают окончание -(e)s. Некоторые предлоги также требуют Genitiv.",
+        "table": [
+          ["maskulin: des Mannes, eines Mannes"],
+          ["neutral: des Kindes, eines Kindes"]
+        ],
+        "examples": [
+          ["Der Titel des Buches ist interessant.", "Название книги интересное."],
+          ["Während des Unterrichts soll man leise sein.", "Во время урока нужно быть тихим."]
+        ]
       },
-      "task": "Составьте 4 предложения с trennbaren и untrennbaren Verben."
+      "task": "Составьте 4 предложения, используя Genitiv для выражения принадлежности и с предлогами."
     },
     {
-      "title": "A2 Урок 30: Итоговый урок A2: комплексное повторение",
-      "words": [["Zusammenfassung","итог"],["Fortschritt","прогресс"],["Fähigkeit","умение"],["Absicht","намерение"],["fließend","бегло"]],
-      "phrases": [["Ich kann jetzt komplexere Texte verstehen.","Теперь я могу понимать более сложные тексты."],["Ich möchte weiter üben.","Я хочу продолжать практиковаться."],["Vielen Dank für die Lektionen!","Спасибо за уроки!"]],
-      "review": [["Perfekt","прошедшее"],["Präteritum","прошл. простое"],["Passiv","пассив"],["Konjunktiv","конъюнктив"]],
+      "title": "A2 Урок 30: Итоговый урок A2",
+      "words": [
+        ["die Zusammenfassung", "итог, резюме (цузАмэнфасунг)"],
+        ["der Fortschritt", "прогресс (фОртшрит)"],
+        ["die Fähigkeit", "умение, способность (фЭ:ихькайт)"],
+        ["die Absicht", "намерение (Апзихьт)"],
+        ["fließend", "бегло (флИ:сэнт)"],
+        ["üben", "упражняться (Ю:бэн)"]
+      ],
+      "phrases": [
+        ["Ich kann jetzt komplexere Texte verstehen.", "Теперь я могу понимать более сложные тексты."],
+        ["Ich möchte mein Deutsch weiter verbessern.", "Я хочу и дальше улучшать свой немецкий."],
+        ["Vielen Dank für die Lektionen!", "Большое спасибо за уроки!"]
+      ],
+      "review": [
+        ["Perfekt/Präteritum", "прошедшие времена"],
+        ["Passiv", "пассивный залог"],
+        ["Konjunktiv II", "сослагательное наклонение"],
+        ["Nebensätze", "придаточные предложения"]
+      ],
       "gram": {
-        "rule": "Повторение: Perfekt, Präteritum, Passiv, Konjunktiv, Relativsätze.",
-        "table": [["ich habe gemacht","ich machte"],["ich werde gemacht","ich wurde gemacht"]],
-        "examples": [["Ich habe gestern einen Text gelesen.","Вчера я прочитал текст."],["Er würde mehr sprechen, wenn er könnte.","Он говорил бы больше, если бы мог."]]
+        "rule": "Комплексное повторение: времена, залоги, наклонения, типы предложений. Ключ к успеху - комбинирование этих структур в свободной речи.",
+        "table": [
+          ["Ich habe gestern einen Film gesehen (Perfekt)."],
+          ["Wenn ich Zeit hätte, würde ich dir helfen (Konj. II)."],
+          ["Das ist der Mann, den ich kenne (Relativsatz)."]
+        ],
+        "examples": [
+          ["Obwohl das Wetter schlecht war, sind wir spazieren gegangen.", "Хотя погода была плохой, мы пошли гулять."],
+          ["Er sagte, dass er das Buch, das ich ihm empfohlen habe, schon gelesen hätte.", "Он сказал, что уже прочитал книгу, которую я ему порекомендовал."]
+        ]
       },
-      "task": "Напишите письмо (10–12 предложений), используя все изученные конструкции."
+      "task": "Напишите небольшое письмо воображаемому немецкому другу (10–12 предложений), рассказав о себе, своих планах и используя как можно больше грамматических конструкций уровня А2."
     }
   ]
 }
