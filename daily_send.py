@@ -3,6 +3,7 @@ import logging
 import time
 from aiogram import Bot
 from aiogram.client.default import DefaultBotProperties
+from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramForbiddenError, TelegramRetryAfter, TelegramNetworkError, TelegramAPIError
 from config import BOT_TOKEN
 from models import get_active_users, get_user, increment_lesson, set_last_sent, mark_blocked
@@ -43,7 +44,7 @@ async def send_one(bot: Bot, user_id: int):
 async def broadcast():
     if not BOT_TOKEN:
         raise RuntimeError("BOT_TOKEN не задан")
-    bot = Bot(BOT_TOKEN, default=DefaultBotProperties(parse_mode=None))
+    bot = Bot(BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     user_ids = get_active_users()
     if not user_ids:
         return
