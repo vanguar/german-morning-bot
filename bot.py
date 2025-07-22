@@ -8,6 +8,12 @@ from aiogram.enums import ParseMode
 
 from config import BOT_TOKEN, MAX_MANUAL_PER_DAY, DEFAULT_LEVEL
 from logging_conf import setup_logging
+
+# Scheduler imports
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from apscheduler.triggers.cron import CronTrigger
+from daily_send import send_daily_lessons
+
 from models import (
     init_db,
     register_user,
@@ -26,6 +32,7 @@ from models import (
 from lesson_manager import LessonManager
 from utils import utc_date_str
 
+# Initialize logging
 setup_logging()
 logger = logging.getLogger(__name__)
 
@@ -62,34 +69,26 @@ def build_start_text() -> str:
 
 # -------- Handlers --------
 
-# ИЗМЕНЕНО: теперь отправляется одно сообщение
 async def cmd_start(message: Message):
     user_id = message.from_user.id
     register_user(user_id, utc_date_str())
     reactivate_if_blocked(user_id)
-    # Отправляем одно универсальное сообщение с обеими клавиатурами
     await message.answer(build_start_text(), reply_markup=level_kb)
-    # Reply-клавиатура отправляется вместе с первым сообщением и "прилипает"
     await message.answer("Главное меню:", reply_markup=kb)
 
-    # --- Авто-активация урока и рассылки сразу после /start ---
     row = get_user(user_id)
     level = row[1]
     first_text = lesson_mgr.current_or_end(level, 0)
     await message.answer(f"<b>🌅 Ваш первый урок</b>\n\n{first_text}")
-    # Обновляем БД так же, как при ручном уроке
     set_last_request(user_id)
     increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
-    # Информируем о подписке
     await message.answer(
         "🔔 Ежедневная утренняя рассылка активирована!\n"
         "Каждое утро вы будете получать новый урок."
     )
-    
 
-# Обработчик для нажатий на Inline-кнопки
 async def set_level_callback_handler(callback: CallbackQuery):
     new_level = callback.data.split(":")[1]
     user_id = callback.from_user.id
@@ -109,9 +108,8 @@ async def set_level_callback_handler(callback: CallbackQuery):
     await callback.message.answer(
         f"✅ Уровень изменён на <b>{new_level}</b>.\n"
         "Нажмите «📘 Следующий урок», чтобы получить новый урок по выбранному уровню."
-    )    
+    )
 
-# Остальные хендлеры остаются без изменений...
 async def cmd_progress(message: Message):
     row = get_user(message.from_user.id)
     if not row:
@@ -223,9 +221,19 @@ async def main():
         BOT_TOKEN,
         default=DefaultBotProperties(parse_mode=ParseMode.HTML),
     )
+
+    # Настройка планировщика для ежедневных уроков в 08:00 Europe/Berlin
+    scheduler = AsyncIOScheduler(timezone="Europe/Berlin")
+    scheduler.add_job(
+        send_daily_lessons,
+        CronTrigger(hour=8, minute=0),
+        kwargs={"bot": bot}
+    )
+    scheduler.start()
+    logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
+
     logger.info("Bot started (polling)...")
     await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
-
 
 if __name__ == "__main__":
     try:
