@@ -12,7 +12,7 @@ from logging_conf import setup_logging
 # Scheduler imports
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
-from daily_send import send_daily_lessons
+from daily_send import broadcast
 
 from models import (
     init_db,
@@ -59,7 +59,7 @@ level_kb = InlineKeyboardMarkup(inline_keyboard=[
     ]
 ])
 
-# ИЗМЕНЕНО: текст стал более универсальным
+# Универсальное приветственное сообщение
 def build_start_text() -> str:
     return (
         "<b>👋 Привет! Добро пожаловать в мини-бот для изучения 🇩🇪 немецкого.</b>\n\n"
@@ -225,12 +225,11 @@ async def main():
     # Настройка планировщика для ежедневных уроков в 08:00 Europe/Berlin
     scheduler = AsyncIOScheduler(timezone="Europe/Berlin")
     scheduler.add_job(
-        send_daily_lessons,
-        CronTrigger(hour=8, minute=0),
-        kwargs={"bot": bot}
+        broadcast,  # функция из daily_send.py
+        CronTrigger(hour=8, minute=0)
     )
     scheduler.start()
-    logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
+    logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
 
     logger.info("Bot started (polling)...")
     await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
