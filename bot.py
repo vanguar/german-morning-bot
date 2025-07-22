@@ -11,7 +11,7 @@ from logging_conf import setup_logging
 
 # Scheduler imports
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from apscheduler.triggers.interval import IntervalTrigger
+from apscheduler.triggers.cron import CronTrigger
 from daily_send import broadcast
 
 from models import (
@@ -224,10 +224,9 @@ async def main():
 
     # вместо CronTrigger импортируем IntervalTrigger
     scheduler = AsyncIOScheduler(timezone="Europe/Berlin")
-    # запускаем рассылку каждые 15 секунд
     scheduler.add_job(
         broadcast,
-        IntervalTrigger(seconds=15)
+        CronTrigger(hour=8, minute=0)
     )
 
     scheduler.start()
