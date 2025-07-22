@@ -3,6 +3,7 @@ import time
 from typing import Optional, List, Tuple
 from config import DEFAULT_LEVEL
 
+
 DB_PATH = 'users.db'
 
 
