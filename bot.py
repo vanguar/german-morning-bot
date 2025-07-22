@@ -11,7 +11,7 @@ from logging_conf import setup_logging
 
 # Scheduler imports
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from apscheduler.triggers.cron import CronTrigger
+from apscheduler.triggers.interval import IntervalTrigger
 from daily_send import broadcast
 
 from models import (
@@ -222,12 +222,14 @@ async def main():
         default=DefaultBotProperties(parse_mode=ParseMode.HTML),
     )
 
-    # Настройка планировщика для ежедневных уроков в 08:00 Europe/Berlin
+    # вместо CronTrigger импортируем IntervalTrigger
     scheduler = AsyncIOScheduler(timezone="Europe/Berlin")
+    # запускаем рассылку каждые 15 секунд
     scheduler.add_job(
-        broadcast,  # функция из daily_send.py
-        CronTrigger(hour=8, minute=0)
+        broadcast,
+        IntervalTrigger(seconds=15)
     )
+
     scheduler.start()
     logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
 
