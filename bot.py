@@ -6,7 +6,7 @@ from aiogram.filters import Command
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-from config import BOT_TOKEN, MAX_MANUAL_PER_DAY, DEFAULT_LEVEL
+from config import BOT_TOKEN, MAX_MANUAL_PER_DAY, DEFAULT_LEVEL, DB_PATH
 from logging_conf import setup_logging
 
 # Scheduler imports
@@ -201,7 +201,20 @@ async def fallback(message: Message):
         "Не понял. Кнопки:\n📘 урок • 🔁 повтор • 📈 прогресс • 🏁 сначала\nИли выберите уровень через /start."
     )
 
+async def cmd_backup_db(message: Message):
+    try:
+        from aiogram.types import FSInputFile
+        # Отправь файл базы
+        db_file = FSInputFile(DB_PATH, filename="users_backup.db")
+        await message.answer_document(
+            db_file,
+            caption=f"📁 Резервная копия базы данных\n📅 {utc_date_str()}"
+        )
+    except Exception as e:
+        await message.answer(f"❌ Ошибка: {str(e)}")    
+
 # -------- Main --------
+
 
 async def main():
     init_db()
@@ -216,6 +229,7 @@ async def main():
     dp.message.register(cmd_progress, F.text == "📈 Прогресс")
     dp.message.register(restart_from_first_handler, F.text == "🏁 Начать с первого урока")
     dp.message.register(fallback)
+    dp.message.register(cmd_backup_db, Command("backup"))
 
     bot = Bot(
         BOT_TOKEN,

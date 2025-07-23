@@ -14,4 +14,7 @@ git remote add origin https://github.com/ваш-логин/имя-репо.git  
 git push origin main   -   отправить на ГитХаб
 
 
+Для выгрузки базы данных пользователей из сервака на локалку:
+
+
 
