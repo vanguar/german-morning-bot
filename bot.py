@@ -91,7 +91,9 @@ def build_start_text() -> str:
 
 async def cmd_start(message: Message):
     user_id = message.from_user.id
-    register_user(user_id, utc_date_str())
+    username = message.from_user.username
+    full_name = f"{message.from_user.first_name or ''} {message.from_user.last_name or ''}".strip()
+    register_user(user_id, utc_date_str(), username, full_name)
     reactivate_if_blocked(user_id)
     await message.answer(build_start_text(), reply_markup=level_kb)
     await message.answer("Главное меню:", reply_markup=kb)
@@ -197,7 +199,9 @@ async def restart_from_first_handler(message: Message):
     user_id = message.from_user.id
     row = get_user(user_id)
     if not row:
-        register_user(user_id, utc_date_str())
+        username = message.from_user.username
+        full_name = f"{message.from_user.first_name or ''} {message.from_user.last_name or ''}".strip()
+        register_user(user_id, utc_date_str(), username, full_name)
 
     reset_progress_to_first(user_id)
     row2 = get_user(user_id)
@@ -367,7 +371,7 @@ async def export_users_txt(callback: CallbackQuery):
         with get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute("""
-                SELECT user_id, level, lesson_index, start_date, status 
+                SELECT user_id, username, full_name, level, lesson_index, start_date, status 
                 FROM users ORDER BY user_id
             """)
             users = cursor.fetchall()
@@ -376,13 +380,15 @@ async def export_users_txt(callback: CallbackQuery):
             f"📊 Экспорт пользователей - {utc_date_str()}",
             f"Всего: {len(users)} пользователей",
             "",
-            "ID | Уровень | Урок | Дата старта | Статус",
-            "-" * 50
+            "ID | Username | Имя | Уровень | Урок | Дата старта | Статус",
+            "-" * 70
         ]
         
         for user in users:
-            user_id, level, lesson_idx, start_date, status = user
-            text_lines.append(f"{user_id} | {level} | {lesson_idx} | {start_date} | {status}")
+            user_id, username, full_name, level, lesson_idx, start_date, status = user
+            username_display = f"@{username}" if username else "—"
+            full_name_display = full_name if full_name else "—"
+            text_lines.append(f"{user_id} | {username_display} | {full_name_display} | {level} | {lesson_idx} | {start_date} | {status}")
         
         text_file = BufferedInputFile(
             "\n".join(text_lines).encode('utf-8'),

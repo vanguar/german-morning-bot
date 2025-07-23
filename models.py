@@ -23,9 +23,23 @@ def init_db():
             last_sent_lesson_at INTEGER,
             last_request_at INTEGER,
             status TEXT DEFAULT 'active',
-            reactivated_at INTEGER
+            reactivated_at INTEGER,
+            username TEXT,
+            full_name TEXT
         )
         """)
+        
+        # Добавляем новые колонки к существующей таблице (если их нет)
+        try:
+            c.execute("ALTER TABLE users ADD COLUMN username TEXT")
+        except:
+            pass  # Колонка уже существует
+        
+        try:
+            c.execute("ALTER TABLE users ADD COLUMN full_name TEXT")
+        except:
+            pass  # Колонка уже существует
+        
         c.execute("""
         CREATE TABLE IF NOT EXISTS user_errors (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -39,14 +53,13 @@ def init_db():
         """)
         conn.commit()
 
-
-def register_user(user_id: int, start_date: str):
+def register_user(user_id: int, start_date: str, username: str = None, full_name: str = None):
     with get_conn() as conn:
         c = conn.cursor()
         c.execute("""
-            INSERT OR IGNORE INTO users (user_id, start_date)
-            VALUES (?, ?)
-        """, (user_id, start_date))
+            INSERT OR IGNORE INTO users (user_id, start_date, username, full_name)
+            VALUES (?, ?, ?, ?)
+        """, (user_id, start_date, username, full_name))
         conn.commit()
 
 
