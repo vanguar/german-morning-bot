@@ -238,12 +238,12 @@ async def main():
     dp.callback_query.register(set_level_callback_handler, F.data.startswith("set_level:"))
     
     dp.message.register(cmd_progress, Command("progress"))
+    dp.message.register(cmd_backup_db, Command("backup"))  # ← ПЕРЕНЕСИ СЮДА!
     dp.message.register(next_lesson_handler, F.text == "📘 Следующий урок")
     dp.message.register(repeat_all_handler, F.text == "🔁 Повторить все")
     dp.message.register(cmd_progress, F.text == "📈 Прогресс")
     dp.message.register(restart_from_first_handler, F.text == "🏁 Начать с первого урока")
-    dp.message.register(fallback)
-    dp.message.register(cmd_backup_db, Command("backup"))
+    dp.message.register(fallback)  # ← fallback ВСЕГДА ПОСЛЕДНИЙ!
 
     bot = Bot(
         BOT_TOKEN,
