@@ -203,15 +203,29 @@ async def fallback(message: Message):
 
 async def cmd_backup_db(message: Message):
     try:
+        import os
         from aiogram.types import FSInputFile
-        # Отправь файл базы
-        db_file = FSInputFile(DB_PATH, filename="users_backup.db")
-        await message.answer_document(
-            db_file,
-            caption=f"📁 Резервная копия базы данных\n📅 {utc_date_str()}"
-        )
+        
+        # Подробная диагностика
+        await message.answer(f"🔍 DB_PATH из config: `{DB_PATH}`")
+        await message.answer(f"📁 Файл существует: {os.path.exists(DB_PATH)}")
+        
+        # Проверим содержимое директорий
+        await message.answer(f"📂 Содержимое /data: {os.listdir('/data') if os.path.exists('/data') else 'папка не существует'}")
+        await message.answer(f"📂 Текущая папка: {os.getcwd()}")
+        await message.answer(f"📂 Содержимое текущей папки: {os.listdir('.')}")
+        
+        # Поищем базу везде
+        for root, dirs, files in os.walk('/'):
+            for file in files:
+                if file.endswith('.db'):
+                    await message.answer(f"🔍 Найден .db файл: {os.path.join(root, file)}")
+                    break
+            if len(files) > 0:
+                break  # чтобы не искать слишком долго
+                
     except Exception as e:
-        await message.answer(f"❌ Ошибка: {str(e)}")    
+        await message.answer(f"❌ Ошибка: {str(e)}")  
 
 # -------- Main --------
 
