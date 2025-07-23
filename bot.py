@@ -1,4 +1,5 @@
 import asyncio
+import os
 import logging
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
@@ -56,6 +57,25 @@ level_kb = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(text="🚀 Уровень A1", callback_data="set_level:A1"),
         InlineKeyboardButton(text="🚀🚀 Уровень A2", callback_data="set_level:A2")
+    ]
+])
+
+# Админ-панель клавиатура
+admin_kb = InlineKeyboardMarkup(inline_keyboard=[
+    [
+        InlineKeyboardButton(text="📊 Статистика за сегодня", callback_data="stats_today"),
+        InlineKeyboardButton(text="📈 За неделю", callback_data="stats_week")
+    ],
+    [
+        InlineKeyboardButton(text="📅 За месяц", callback_data="stats_month"),
+        InlineKeyboardButton(text="📋 За весь период", callback_data="stats_all")
+    ],
+    [
+        InlineKeyboardButton(text="💾 Скачать базу SQLite", callback_data="download_db"),
+        InlineKeyboardButton(text="📄 Экспорт в TXT", callback_data="export_txt")
+    ],
+    [
+        InlineKeyboardButton(text="📊 Экспорт в CSV", callback_data="export_csv")
     ]
 ])
 
@@ -203,32 +223,217 @@ async def fallback(message: Message):
 
 async def cmd_backup_db(message: Message):
     try:
-        import os
         from aiogram.types import FSInputFile
         
-        # Подробная диагностика
-        await message.answer(f"🔍 DB_PATH из config: `{DB_PATH}`")
-        await message.answer(f"📁 Файл существует: {os.path.exists(DB_PATH)}")
+        # Отправь файл базы
+        db_file = FSInputFile(DB_PATH, filename="users_backup.db")
+        await message.answer_document(
+            db_file,
+            caption=f"📁 Резервная копия базы данных\n📅 {utc_date_str()}\n💾 Размер: {os.path.getsize(DB_PATH)} байт"
+        )
         
-        # Проверим содержимое директорий
-        await message.answer(f"📂 Содержимое /data: {os.listdir('/data') if os.path.exists('/data') else 'папка не существует'}")
-        await message.answer(f"📂 Текущая папка: {os.getcwd()}")
-        await message.answer(f"📂 Содержимое текущей папки: {os.listdir('.')}")
-        
-        # Поищем базу везде
-        for root, dirs, files in os.walk('/'):
-            for file in files:
-                if file.endswith('.db'):
-                    await message.answer(f"🔍 Найден .db файл: {os.path.join(root, file)}")
-                    break
-            if len(files) > 0:
-                break  # чтобы не искать слишком долго
-                
     except Exception as e:
-        await message.answer(f"❌ Ошибка: {str(e)}")  
+        await message.answer(f"❌ Ошибка: {str(e)}")
+
+# -------- НОВЫЕ АДМИН ФУНКЦИИ --------
+
+async def cmd_admin(message: Message):
+    await message.answer(
+        "🔧 <b>Админ-панель</b>\n\n"
+        "Выберите действие:",
+        reply_markup=admin_kb
+    )
+
+async def admin_callback_handler(callback: CallbackQuery):
+    action = callback.data
+    
+    if action == "stats_today":
+        await show_stats(callback, "today")
+    elif action == "stats_week":
+        await show_stats(callback, "week")
+    elif action == "stats_month":
+        await show_stats(callback, "month")
+    elif action == "stats_all":
+        await show_stats(callback, "all")
+    elif action == "download_db":
+        await download_database(callback)
+    elif action == "export_txt":
+        await export_users_txt(callback)
+    elif action == "export_csv":
+        await export_users_csv(callback)
+
+async def show_stats(callback: CallbackQuery, period: str):
+    try:
+        from models import get_conn
+        import time
+        from datetime import datetime, timedelta
+        
+        now = datetime.now()
+        
+        # Определяем период
+        if period == "today":
+            start_date = now.replace(hour=0, minute=0, second=0, microsecond=0)
+            title = "📊 Статистика за сегодня"
+        elif period == "week":
+            start_date = now - timedelta(days=7)
+            title = "📈 Статистика за неделю"
+        elif period == "month":
+            start_date = now - timedelta(days=30)
+            title = "📅 Статистика за месяц"
+        else:  # all
+            start_date = datetime(2020, 1, 1)  # Очень старая дата
+            title = "📋 Статистика за весь период"
+        
+        start_timestamp = int(start_date.timestamp())
+        
+        with get_conn() as conn:
+            cursor = conn.cursor()
+            
+            # Общее количество пользователей
+            cursor.execute("SELECT COUNT(*) FROM users")
+            total_users = cursor.fetchone()[0]
+            
+            # Новые пользователи за период
+            cursor.execute("""
+                SELECT COUNT(*) FROM users 
+                WHERE last_request_at >= ? OR start_date >= ?
+            """, (start_timestamp, start_date.strftime('%Y-%m-%d')))
+            new_users = cursor.fetchone()[0]
+            
+            # Активные пользователи за период
+            cursor.execute("""
+                SELECT COUNT(*) FROM users 
+                WHERE last_request_at >= ? AND status = 'active'
+            """, (start_timestamp,))
+            active_users = cursor.fetchone()[0]
+            
+            # Статистика по уровням
+            cursor.execute("""
+                SELECT level, COUNT(*) FROM users 
+                WHERE (last_request_at >= ? OR start_date >= ?) AND status = 'active'
+                GROUP BY level
+            """, (start_timestamp, start_date.strftime('%Y-%m-%d')))
+            level_stats = cursor.fetchall()
+            
+            # Средний прогресс
+            cursor.execute("""
+                SELECT AVG(lesson_index) FROM users 
+                WHERE (last_request_at >= ? OR start_date >= ?) AND status = 'active'
+            """, (start_timestamp, start_date.strftime('%Y-%m-%d')))
+            avg_progress = cursor.fetchone()[0] or 0
+        
+        # Формируем сообщение
+        stats_text = [
+            f"<b>{title}</b>",
+            "",
+            f"👥 Всего пользователей: <b>{total_users}</b>",
+            f"🆕 Новых за период: <b>{new_users}</b>",
+            f"🟢 Активных за период: <b>{active_users}</b>",
+            f"📚 Средний прогресс: <b>{avg_progress:.1f}</b> урока",
+            "",
+            "<b>📊 По уровням:</b>"
+        ]
+        
+        for level, count in level_stats:
+            stats_text.append(f"  • {level}: <b>{count}</b> чел.")
+        
+        await callback.message.edit_text(
+            "\n".join(stats_text),
+            reply_markup=admin_kb
+        )
+        await callback.answer()
+        
+    except Exception as e:
+        await callback.answer(f"❌ Ошибка: {str(e)}", show_alert=True)
+
+async def download_database(callback: CallbackQuery):
+    try:
+        from aiogram.types import FSInputFile
+        
+        db_file = FSInputFile(DB_PATH, filename="users_backup.db")
+        await callback.message.answer_document(
+            db_file,
+            caption=f"📁 База данных SQLite\n📅 {utc_date_str()}"
+        )
+        await callback.answer("✅ База отправлена!")
+    except Exception as e:
+        await callback.answer(f"❌ Ошибка: {str(e)}", show_alert=True)
+
+async def export_users_txt(callback: CallbackQuery):
+    try:
+        from models import get_conn
+        from aiogram.types import BufferedInputFile
+        
+        with get_conn() as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT user_id, level, lesson_index, start_date, status 
+                FROM users ORDER BY user_id
+            """)
+            users = cursor.fetchall()
+        
+        text_lines = [
+            f"📊 Экспорт пользователей - {utc_date_str()}",
+            f"Всего: {len(users)} пользователей",
+            "",
+            "ID | Уровень | Урок | Дата старта | Статус",
+            "-" * 50
+        ]
+        
+        for user in users:
+            user_id, level, lesson_idx, start_date, status = user
+            text_lines.append(f"{user_id} | {level} | {lesson_idx} | {start_date} | {status}")
+        
+        text_file = BufferedInputFile(
+            "\n".join(text_lines).encode('utf-8'),
+            filename=f"users_{utc_date_str()}.txt"
+        )
+        
+        await callback.message.answer_document(
+            text_file,
+            caption=f"📄 Экспорт в TXT\n👥 {len(users)} пользователей"
+        )
+        await callback.answer("✅ TXT файл отправлен!")
+    except Exception as e:
+        await callback.answer(f"❌ Ошибка: {str(e)}", show_alert=True)
+
+async def export_users_csv(callback: CallbackQuery):
+    try:
+        from models import get_conn
+        from aiogram.types import BufferedInputFile
+        
+        with get_conn() as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT user_id, level, lesson_index, manual_lessons_today,
+                       start_date, last_sent_lesson_at, last_request_at, status 
+                FROM users ORDER BY user_id
+            """)
+            users = cursor.fetchall()
+        
+        # CSV формат
+        csv_lines = [
+            "user_id,level,lesson_index,manual_today,start_date,last_sent,last_request,status"
+        ]
+        
+        for user in users:
+            csv_lines.append(",".join([str(field) if field is not None else "" for field in user]))
+        
+        csv_content = "\n".join(csv_lines)
+        csv_file = BufferedInputFile(
+            csv_content.encode('utf-8'),
+            filename=f"users_export_{utc_date_str()}.csv"
+        )
+        
+        await callback.message.answer_document(
+            csv_file,
+            caption=f"📊 Экспорт в CSV\n👥 {len(users)} пользователей\n💡 Можно открыть в Excel"
+        )
+        await callback.answer("✅ CSV файл отправлен!")
+    except Exception as e:
+        await callback.answer(f"❌ Ошибка: {str(e)}", show_alert=True)
 
 # -------- Main --------
-
 
 async def main():
     init_db()
@@ -238,12 +443,15 @@ async def main():
     dp.callback_query.register(set_level_callback_handler, F.data.startswith("set_level:"))
     
     dp.message.register(cmd_progress, Command("progress"))
-    dp.message.register(cmd_backup_db, Command("backup"))  # ← ПЕРЕНЕСИ СЮДА!
+    dp.message.register(cmd_backup_db, Command("backup"))
+    dp.message.register(cmd_admin, Command("admin"))
+    dp.callback_query.register(admin_callback_handler, F.data.startswith(("stats_", "download_", "export_")))
+    
     dp.message.register(next_lesson_handler, F.text == "📘 Следующий урок")
     dp.message.register(repeat_all_handler, F.text == "🔁 Повторить все")
     dp.message.register(cmd_progress, F.text == "📈 Прогресс")
     dp.message.register(restart_from_first_handler, F.text == "🏁 Начать с первого урока")
-    dp.message.register(fallback)  # ← fallback ВСЕГДА ПОСЛЕДНИЙ!
+    dp.message.register(fallback)
 
     bot = Bot(
         BOT_TOKEN,
@@ -258,7 +466,7 @@ async def main():
     )
 
     scheduler.start()
-    logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
+    logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
 
     logger.info("Bot started (polling)...")
     await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
