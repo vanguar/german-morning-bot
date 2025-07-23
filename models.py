@@ -3,9 +3,6 @@ import time
 from typing import Optional, List, Tuple
 from config import DEFAULT_LEVEL
 from config import DB_PATH
-conn = sqlite3.connect(DB_PATH)
-
-DB_PATH = 'users.db'
 
 
 def get_conn():
