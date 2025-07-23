@@ -242,6 +242,17 @@ async def cmd_backup_db(message: Message):
 # -------- НОВЫЕ АДМИН ФУНКЦИИ --------
 
 async def cmd_admin(message: Message):
+    # ПРОВЕРКА НА АДМИНА
+    try:
+        from config import ADMIN_IDS
+        if message.from_user.id not in ADMIN_IDS:
+            await message.answer("❌ У вас нет прав доступа к админ-панели")
+            return
+    except ImportError:
+        # Если ADMIN_IDS не настроены, запрети всем
+        await message.answer("❌ Админ-панель не настроена")
+        return
+    
     await message.answer(
         "🔧 <b>Админ-панель</b>\n\n"
         "Выберите действие:",
@@ -249,6 +260,16 @@ async def cmd_admin(message: Message):
     )
 
 async def admin_callback_handler(callback: CallbackQuery):
+    # ПРОВЕРКА НА АДМИНА
+    try:
+        from config import ADMIN_IDS
+        if callback.from_user.id not in ADMIN_IDS:
+            await callback.answer("❌ У вас нет прав доступа", show_alert=True)
+            return
+    except ImportError:
+        await callback.answer("❌ Админ-панель не настроена", show_alert=True)
+        return
+    
     action = callback.data
     
     if action == "stats_today":
