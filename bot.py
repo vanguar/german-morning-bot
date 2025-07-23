@@ -468,11 +468,16 @@ async def main():
     scheduler = AsyncIOScheduler(timezone="Europe/Berlin")
     scheduler.add_job(
         broadcast,
-        CronTrigger(hour=8, minute=0)
+        CronTrigger(hour=8, minute=0, timezone="Europe/Berlin"),
+        misfire_grace_time=86400,
+        coalesce=True,
+        id="daily_broadcast"
     )
 
     scheduler.start()
     logger.info("Scheduler started for daily lessons at 08:00 Europe/Berlin")
+    for job in scheduler.get_jobs():
+        logger.info(f"Next run for {job.id}: {job.next_run_time}")
 
     logger.info("Bot started (polling)...")
     await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
