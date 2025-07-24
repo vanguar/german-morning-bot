@@ -48,6 +48,7 @@ kb = ReplyKeyboardMarkup(
         [KeyboardButton(text="📘 Следующий урок")],
         [KeyboardButton(text="🔁 Повторить все"), KeyboardButton(text="📈 Прогресс")],
         [KeyboardButton(text="🏁 Начать с первого урока")],
+        [KeyboardButton(text="🗑️ Удалить мои данные")],
     ],
     resize_keyboard=True,
 )
@@ -183,7 +184,15 @@ async def next_lesson_handler(message: Message):
         await message.answer("Достигнут лимит ручных уроков на сегодня.")
         return
 
-    text = lesson_mgr.current_or_end(level, lesson_index)
+    # СНАЧАЛА увеличиваем индекс в базе
+    increment_lesson(user_id)
+    
+    # ЗАНОВО получаем обновленные данные из базы
+    updated_row = get_user(user_id)
+    updated_lesson_index = updated_row[2]
+    
+    # Берем урок по новому индексу
+    text = lesson_mgr.current_or_end(level, updated_lesson_index)
     if not text:
         await message.answer("Не удалось получить урок (проверь lessons.json).")
         return
@@ -191,7 +200,6 @@ async def next_lesson_handler(message: Message):
     await message.answer(text)
 
     set_last_request(user_id)
-    increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
 
@@ -237,6 +245,39 @@ async def cmd_backup_db(message: Message):
         
     except Exception as e:
         await message.answer(f"❌ Ошибка: {str(e)}")
+
+async def cmd_reset_me(message: Message):
+    """Полностью удаляет твою запись из базы для тестирования"""
+    try:
+        from models import get_conn
+        user_id = message.from_user.id
+        
+        with get_conn() as conn:
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM users WHERE user_id = ?", (user_id,))
+            conn.commit()
+        
+        await message.answer("🔥 Твоя запись удалена! Теперь /start для новой регистрации.")
+    except Exception as e:
+        await message.answer(f"❌ Ошибка: {str(e)}")    
+
+async def delete_my_data_handler(message: Message):
+    """Хандлер для кнопки удаления данных"""
+    try:
+        from models import get_conn
+        user_id = message.from_user.id
+        
+        with get_conn() as conn:
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM users WHERE user_id = ?", (user_id,))
+            conn.commit()
+        
+        await message.answer(
+            "🗑️ <b>Ваши данные удалены из базы!</b>\n\n"
+            "Чтобы снова начать пользоваться ботом, нажмите /start"
+        )
+    except Exception as e:
+        await message.answer(f"❌ Ошибка: {str(e)}")            
 
 # -------- НОВЫЕ АДМИН ФУНКЦИИ --------
 
@@ -470,6 +511,7 @@ async def main():
     
     dp.message.register(cmd_progress, Command("progress"))
     dp.message.register(cmd_backup_db, Command("backup"))
+    dp.message.register(cmd_reset_me, Command("reset_me"))
     dp.message.register(cmd_admin, Command("admin"))
     dp.callback_query.register(admin_callback_handler, F.data.startswith(("stats_", "download_", "export_")))
     
@@ -477,6 +519,7 @@ async def main():
     dp.message.register(repeat_all_handler, F.text == "🔁 Повторить все")
     dp.message.register(cmd_progress, F.text == "📈 Прогресс")
     dp.message.register(restart_from_first_handler, F.text == "🏁 Начать с первого урока")
+    dp.message.register(delete_my_data_handler, F.text == "🗑️ Удалить мои данные")
     dp.message.register(fallback)
 
     bot = Bot(
