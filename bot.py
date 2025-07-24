@@ -100,10 +100,10 @@ async def cmd_start(message: Message):
 
     row = get_user(user_id)
     level = row[1]
-    first_text = lesson_mgr.current_or_end(level, 0)
-    await message.answer(f"<b>🌅 Ваш первый урок</b>\n\n{first_text}")
+    current_lesson_index = row[2]  # Берём ТЕКУЩИЙ индекс из базы
+    current_text = lesson_mgr.current_or_end(level, current_lesson_index)
+    await message.answer(f"<b>🌅 Ваш текущий урок</b>\n\n{current_text}")
     set_last_request(user_id)
-    increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
     await message.answer(
@@ -216,7 +216,6 @@ async def restart_from_first_handler(message: Message):
     await message.answer("<b>Прогресс обнулён.</b> Начинаем сначала!\n\n" + first_text)
 
     set_last_request(user_id)
-    increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
 
