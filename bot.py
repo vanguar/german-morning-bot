@@ -105,6 +105,7 @@ async def cmd_start(message: Message):
     current_text = lesson_mgr.current_or_end(level, current_lesson_index)
     await message.answer(f"<b>🌅 Ваш текущий урок</b>\n\n{current_text}")
     set_last_request(user_id)
+    increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
     await message.answer(
