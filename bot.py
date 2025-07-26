@@ -185,22 +185,18 @@ async def next_lesson_handler(message: Message):
         await message.answer("Достигнут лимит ручных уроков на сегодня.")
         return
 
-    # СНАЧАЛА увеличиваем индекс в базе
-    increment_lesson(user_id)
-    
-    # ЗАНОВО получаем обновленные данные из базы
-    updated_row = get_user(user_id)
-    updated_lesson_index = updated_row[2]
-    
-    # Берем урок по новому индексу
-    text = lesson_mgr.current_or_end(level, updated_lesson_index)
+    # СНАЧАЛА берем урок по ТЕКУЩЕМУ индексу
+    text = lesson_mgr.current_or_end(level, lesson_index)
     if not text:
         await message.answer("Не удалось получить урок (проверь lessons.json).")
         return
 
+    # ПОКАЗЫВАЕМ урок
     await message.answer(text)
 
+    # ПОТОМ увеличиваем индекс
     set_last_request(user_id)
+    increment_lesson(user_id)
     increment_manual(user_id)
     set_last_sent(user_id)
 
