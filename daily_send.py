@@ -8,6 +8,7 @@ from aiogram.exceptions import TelegramForbiddenError, TelegramRetryAfter, Teleg
 from config import BOT_TOKEN
 from models import get_active_users, get_user, increment_lesson, set_last_sent, mark_blocked
 from lesson_manager import LessonManager
+from donate_stars_aiogram import build_donate_kb
 
 logger = logging.getLogger(__name__)
 lesson_mgr = LessonManager()
@@ -23,7 +24,7 @@ async def send_one(bot: Bot, user_id: int):
         return
     text = lesson_mgr.current_or_end(level, lesson_index)
     try:
-        await bot.send_message(user_id, "🌅 Утренний урок\n\n" + text)
+        await bot.send_message(user_id, "🌅 Утренний урок\n\n" + text, reply_markup=build_donate_kb())
         increment_lesson(user_id)
         set_last_sent(user_id, int(time.time()))
     except TelegramForbiddenError:
@@ -31,7 +32,7 @@ async def send_one(bot: Bot, user_id: int):
     except TelegramRetryAfter as e:
         await asyncio.sleep(e.retry_after + 1)
         try:
-            await bot.send_message(user_id, "🌅 Утренний урок\n\n" + text)
+            await bot.send_message(user_id, "🌅 Утренний урок\n\n" + text, reply_markup=build_donate_kb())
             increment_lesson(user_id)
             set_last_sent(user_id, int(time.time()))
         except TelegramForbiddenError:

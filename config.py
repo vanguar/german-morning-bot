@@ -12,6 +12,7 @@ DEFAULT_LEVEL = os.getenv("DEFAULT_LEVEL", "A1")
 LESSONS_FILE = os.getenv("LESSONS_FILE", "lessons.json")
 LOG_FILE = os.getenv("LOG_FILE", "bot.log")
 DB_PATH = os.getenv("DB_PATH", "/data/users.db")
+TELEGRAM_STARS_PROVIDER_TOKEN = os.getenv("TELEGRAM_STARS_PROVIDER_TOKEN", "")
 
 # ADMIN_IDS = set целых чисел
 _admin_raw = os.getenv("ADMIN_IDS", "").strip()

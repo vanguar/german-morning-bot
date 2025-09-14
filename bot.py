@@ -6,6 +6,10 @@ from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKe
 from aiogram.filters import Command
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+# импортируем конструктор кнопки и регистрацию
+from donate_stars_aiogram import build_donate_kb, register_donate_handlers
+
 
 from config import BOT_TOKEN, MAX_MANUAL_PER_DAY, DEFAULT_LEVEL, DB_PATH
 from logging_conf import setup_logging
@@ -57,7 +61,11 @@ kb = ReplyKeyboardMarkup(
 level_kb = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(text="🚀 Уровень A1", callback_data="set_level:A1"),
-        InlineKeyboardButton(text="🚀🚀 Уровень A2", callback_data="set_level:A2")
+        InlineKeyboardButton(text="🚀🚀 Уровень A2", callback_data="set_level:A2"),
+    ],
+    [
+        InlineKeyboardButton(text="🧠 Уровень B1", callback_data="set_level:B1"),
+        InlineKeyboardButton(text="🧠🧠 Уровень B2", callback_data="set_level:B2"),
     ]
 ])
 
@@ -103,7 +111,7 @@ async def cmd_start(message: Message):
     level = row[1]
     current_lesson_index = row[2]  # Берём ТЕКУЩИЙ индекс из базы
     current_text = lesson_mgr.current_or_end(level, current_lesson_index)
-    await message.answer(f"<b>🌅 Ваш текущий урок</b>\n\n{current_text}")
+    await message.answer(f"<b>🌅 Ваш текущий урок</b>\n\n{current_text}", reply_markup=build_donate_kb())
     set_last_request(user_id)
     increment_lesson(user_id)
     increment_manual(user_id)
@@ -192,7 +200,7 @@ async def next_lesson_handler(message: Message):
         return
 
     # ПОКАЗЫВАЕМ урок
-    await message.answer(text)
+    await message.answer(text, reply_markup=build_donate_kb())
 
     # ПОТОМ увеличиваем индекс
     set_last_request(user_id)
@@ -502,6 +510,7 @@ async def export_users_csv(callback: CallbackQuery):
 async def main():
     init_db()
     dp = Dispatcher()
+    register_donate_handlers(dp)
 
     dp.message.register(cmd_start, Command("start"))
     dp.callback_query.register(set_level_callback_handler, F.data.startswith("set_level:"))
@@ -540,7 +549,7 @@ async def main():
         logger.info(f"Next run for {job.id}: {job.next_run_time}")
 
     logger.info("Bot started (polling)...")
-    await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
+    await dp.start_polling(bot, allowed_updates=["message", "callback_query", "pre_checkout_query"])
 
 if __name__ == "__main__":
     try:

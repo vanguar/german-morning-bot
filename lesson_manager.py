@@ -1,3 +1,4 @@
+# lesson_manager.py
 import json
 import html
 import logging
@@ -60,6 +61,22 @@ class LessonManager:
         self.path = path
         self.data: Dict[str, List[dict]] = {}
         self._load()
+        # 🔧 Добавлено: подхват внешних модулей с уроками (B1/B2)
+        self._merge_external()
+
+    # после self._load() в __init__ или в конце _load()
+    def _merge_external(self):
+        import importlib, logging
+        for mod_name in ("lessons_b1", "lessons_b2"):
+            try:
+                mod = importlib.import_module(mod_name)
+                level = getattr(mod, "LEVEL", mod_name.split("_")[-1].upper())
+                lessons = getattr(mod, "LESSONS", [])
+                if lessons:
+                    self.data[level] = lessons
+                    logging.info("Loaded external lessons for %s: %d", level, len(lessons))
+            except Exception as e:
+                logging.info("No external lessons module %s: %s", mod_name, e)    
 
     def _load(self):
         try:
@@ -68,7 +85,6 @@ class LessonManager:
         except (FileNotFoundError, json.JSONDecodeError) as e:
             logging.error(f"Could not load or parse lessons file: {e}")
             self.data = {}
-
 
     def reload(self):
         self._load()
