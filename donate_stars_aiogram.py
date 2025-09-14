@@ -20,11 +20,16 @@ def build_donate_kb() -> InlineKeyboardMarkup:
     ])
 
 def _menu_kb() -> InlineKeyboardMarkup:
-    row1 = [InlineKeyboardButton(f"💖 {PRESETS[1]}⭐", callback_data=f"donate_pick:{PRESETS[1]}"),
-            InlineKeyboardButton(f"🎁 {PRESETS[2]}⭐", callback_data=f"donate_pick:{PRESETS[2]}"),
-            InlineKeyboardButton(f"🏆 {PRESETS[4]}⭐", callback_data=f"donate_pick:{PRESETS[4]}")]
-    row2 = [InlineKeyboardButton(f"⭐ {p}", callback_data=f"donate_pick:{p}") for p in (PRESETS[0], PRESETS[3], PRESETS[5])]
-    return InlineKeyboardMarkup(inline_keyboard=[row1, row2, [InlineKeyboardButton("⬅️ Закрыть", callback_data="donate_close")]])
+    row1 = [
+        InlineKeyboardButton(text=f"💖 {PRESETS[1]}⭐", callback_data=f"donate_pick:{PRESETS[1]}"),
+        InlineKeyboardButton(text=f"🎁 {PRESETS[2]}⭐", callback_data=f"donate_pick:{PRESETS[2]}"),
+        InlineKeyboardButton(text=f"🏆 {PRESETS[4]}⭐", callback_data=f"donate_pick:{PRESETS[4]}"),
+    ]
+    row2 = [
+        InlineKeyboardButton(text=f"⭐ {p}", callback_data=f"donate_pick:{p}")
+        for p in (PRESETS[0], PRESETS[3], PRESETS[5])
+    ]
+    return InlineKeyboardMarkup(inline_keyboard=[row1, row2, [InlineKeyboardButton(text="⬅️ Закрыть", callback_data="donate_close")]])
 
 async def donate_menu_handler(callback_query, bot: Bot):
     await callback_query.answer()
@@ -49,8 +54,8 @@ async def donate_pick_handler(callback_query, bot: Bot):
         title=f"⭐ Поддержка ({stars})",
         description="Спасибо за вклад в развитие бота!",
         payload=f"stars:{stars}",
-        provider_token=PROVIDER_TOKEN,
-        currency=CURRENCY,
+        provider_token=PROVIDER_TOKEN,  # для Stars можно пустую строку
+        currency=CURRENCY,              # "XTR" — звёзды
         prices=prices,
     )
 
@@ -60,7 +65,7 @@ async def pre_checkout_handler(pre_checkout_query: PreCheckoutQuery, bot: Bot):
 
 async def successful_payment_handler(message: Message):
     sp = message.successful_payment
-    stars = sp.total_amount  # для XTR «минимальная единица» == звезда
+    stars = sp.total_amount  # для XTR «минимальная единица» == 1 звезда
     user_name = message.from_user.first_name or (message.from_user.username and f"@{message.from_user.username}") or "друг"
     await message.answer(f"✨ Спасибо, {user_name}! Получено {stars}⭐ — это очень помогает 🙏")
 
