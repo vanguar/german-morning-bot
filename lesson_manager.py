@@ -5,6 +5,10 @@ import logging
 from typing import Dict, List, Any
 from config import LESSONS_FILE
 
+# Порядок уровней для вычисления «следующего»
+LEVELS_ORDER = ["A1", "A2", "B1", "B2"]
+
+
 
 def esc(text: str) -> str:
     return html.escape(text, quote=False)
@@ -110,18 +114,28 @@ class LessonManager:
         return format_lesson(obj, index, total)
 
     def end_message(self, level: str) -> str:
-        other_levels = [lvl for lvl in self.data.keys() if lvl != level]
-        other_level_text = ""
-        if other_levels:
-            other = other_levels[0]
-            other_level_text = f"➡️ Попробуйте перейти на <b>{other}</b>, отправив /start и выбрав уровень."
+        # найдём «следующий» уровень по цепочке, который реально есть в данных
+        next_level = None
+        try:
+            idx = LEVELS_ORDER.index(level)
+        except ValueError:
+            idx = -1
+        if idx >= 0:
+            for lv in LEVELS_ORDER[idx + 1:]:
+                if self.total(lv) > 0:
+                    next_level = lv
+                    break
 
-        return (
-            f"🏆 <b>Все уроки уровня {level} пройдены!</b>\n"
-            f"🔁 Используйте «Повторить все» для закрепления.\n"
-            f"{other_level_text}\n"
-            "✨ Новые блоки уроков появятся позже."
-        )
+        lines = [
+            f"🏆 <b>Все уроки уровня {level} пройдены!</b>",
+            "🔁 Используйте «Повторить все» для закрепления.",
+        ]
+        if next_level:
+            lines.append(f"➡️ Попробуйте перейти на <b>{next_level}</b>, отправив /start и выбрав уровень.")
+        else:
+            lines.append("✨ Новые блоки уроков появятся позже.")
+        return "\n".join(lines)
+
 
     def repeat_all(self, level: str, up_to: int) -> List[str]:
         arr = self.data.get(level, [])
